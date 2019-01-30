@@ -1,0 +1,162 @@
+fileFormatVersion: 2
+guid: 263470a01be51ae4383c458534ac8fe2
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Box001
+    100004: Box002
+    100006: Camera001
+    100008: Camera001.Target
+    100010: Cylinder001
+    100012: Cylinder002
+    100014: Line002
+    100016: Line005
+    100018: Plane002
+    100020: Tube001
+    100022: Tube004
+    100024: Tube005
+    100026: Tube006
+    100028: VRayLight001
+    100030: VRayLight002
+    400000: //RootNode
+    400002: Box001
+    400004: Box002
+    400006: Camera001
+    400008: Camera001.Target
+    400010: Cylinder001
+    400012: Cylinder002
+    400014: Line002
+    400016: Line005
+    400018: Plane002
+    400020: Tube001
+    400022: Tube004
+    400024: Tube005
+    400026: Tube006
+    400028: VRayLight001
+    400030: VRayLight002
+    2000000: Camera001
+    2100000: 'Material #2'
+    2100002: 'Material #3'
+    2100004: No Name
+    2100006: 'Material #4'
+    2100008: 'Material #6'
+    2100010: 'Material #5'
+    2100012: 'Material #7'
+    2300000: Box001
+    2300002: Box002
+    2300004: Cylinder001
+    2300006: Cylinder002
+    2300008: Line002
+    2300010: Line005
+    2300012: Plane002
+    2300014: Tube001
+    2300016: Tube004
+    2300018: Tube005
+    2300020: Tube006
+    3300000: Box001
+    3300002: Box002
+    3300004: Cylinder001
+    3300006: Cylinder002
+    3300008: Line002
+    3300010: Line005
+    3300012: Plane002
+    3300014: Tube001
+    3300016: Tube004
+    3300018: Tube005
+    3300020: Tube006
+    4300000: Line002
+    4300002: Cylinder001
+    4300004: Plane002
+    4300006: Box001
+    4300008: Tube001
+    4300010: Line005
+    4300012: Cylinder002
+    4300014: Tube004
+    4300016: Box002
+    4300018: Tube005
+    4300020: Tube006
+    9500000: //RootNode
+    6000828045688606266: Camera001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.099999994
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
