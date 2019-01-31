@@ -91,7 +91,7 @@ public class SocketTest : MonoBehaviour {
 
     private void Update() {
         // Set the rotation (used to drive the cursor)
-        transform.SetPositionAndRotation(transform.position, Quaternion.Euler(storedRotation));
+        transform.forward = Quaternion.Euler(storedRotation) * Vector3.forward;
         cursorPosition.position = playerCamera.WorldToScreenPoint(aimTransform.position);
 
         // Do player fire events
@@ -105,9 +105,9 @@ public class SocketTest : MonoBehaviour {
             int layerMask = 1 << 9;
 
             RaycastHit hit;
-            Debug.DrawRay(Vector3.zero, fire.storedRotation * 20, Color.yellow);
+            Debug.DrawRay(Vector3.zero, fire.storedRotation * 110, Color.yellow);
             // Does the ray intersect any objects on layer 9
-            if (Physics.Raycast(Vector3.zero, fire.storedRotation, out hit, Mathf.Infinity, layerMask))
+            if (Physics.Raycast(Vector3.zero, fire.storedRotation, out hit, 70.0f, layerMask))
             {
                 // Get the target info component
                 Debug.Log("Did Hit");

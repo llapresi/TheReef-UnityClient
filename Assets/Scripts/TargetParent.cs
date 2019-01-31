@@ -6,11 +6,10 @@ public class TargetParent : MonoBehaviour {
 
     // Use this for initialization
     public TargetInfo targetInfo;
-    public SphereCollider collider;
-    Renderer renderer;
+    public Collider Collider;
+    public Renderer ourRenderer;
 
 	void Start () {
-        renderer = GetComponent<Renderer>();
 
     }
 	
@@ -26,9 +25,9 @@ public class TargetParent : MonoBehaviour {
 
     IEnumerator ChangeColor()
     {
-        Color originalColor = renderer.material.GetColor("_Color");
-        renderer.material.SetColor("_Color", Color.red);
+        Color originalColor = ourRenderer.material.GetColor("_Color");
+        ourRenderer.material.SetColor("_Color", Color.red);
         yield return new WaitForSeconds(0.6f);
-        renderer.material.SetColor("_Color", originalColor);
+        ourRenderer.material.SetColor("_Color", originalColor);
     }
 }

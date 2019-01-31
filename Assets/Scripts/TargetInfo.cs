@@ -5,5 +5,6 @@ using UnityEngine;
 public class TargetInfo : MonoBehaviour {
 
     public string targetName;
+    [TextArea]
     public string targetDescription;
 }
