@@ -40,26 +40,13 @@ public class TargetInfoMessage
 
 public class SocketTest : MonoBehaviour {
 
-    [System.Serializable]
-    public class SpawnProperties
-    {
-        public float minX;
-        public float maxX;
-        public float minY;
-        public float maxY;
-        public float minZ;
-        public float maxZ;
-        public GameObject prefabToSpawn;
-    }
-
-    public SpawnProperties spawnProperties;
     public string serverURL;
     Vector3 storedRotation;
     WebSocket webSocket;
     public UnityEngine.UI.Image cursorImage;
     RectTransform cursorPosition;
-    public Camera playerCamera;
-    public Transform aimTransform;
+    public Camera camera;
+    public float cursorSensitivity = 20;
 
     List<StoredPlayerFire> queuedPlayerFires;
 
@@ -91,8 +78,8 @@ public class SocketTest : MonoBehaviour {
 
     private void Update() {
         // Set the rotation (used to drive the cursor)
-        transform.forward = Quaternion.Euler(storedRotation) * Vector3.forward;
-        cursorPosition.position = playerCamera.WorldToScreenPoint(aimTransform.position);
+        Vector3 aimForward = Quaternion.Euler(storedRotation) * Vector3.forward;
+        cursorPosition.anchoredPosition = new Vector3(aimForward.x * cursorSensitivity, aimForward.y  * cursorSensitivity, 0);
 
         // Do player fire events
         foreach (StoredPlayerFire fire in queuedPlayerFires)
@@ -105,9 +92,9 @@ public class SocketTest : MonoBehaviour {
             int layerMask = 1 << 9;
 
             RaycastHit hit;
-            Debug.DrawRay(Vector3.zero, fire.storedRotation * 110, Color.yellow);
             // Does the ray intersect any objects on layer 9
-            if (Physics.Raycast(Vector3.zero, fire.storedRotation, out hit, 70.0f, layerMask))
+            var Ray = camera.ScreenPointToRay(cursorPosition.position);
+            if (Physics.Raycast(Ray, out hit, 70.0f, layerMask))
             {
                 // Get the target info component
                 Debug.Log("Did Hit");
