@@ -1,29 +1,25 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using System;
 using WebSocketSharp;
 using System.Collections.Generic;
 
-[System.Serializable]
-public class RotationMessage
-{
-    public string type;
-    public float x;
-    public float y;
-    public float z;
-}
-
-[System.Serializable]
-public class CommonTypeMessage
-{
-    public string type;
-}
-
 public class StoredPlayerFire
+{
+    public bool hasBeenChecked;
+
+    public StoredPlayerFire()
+    {
+        hasBeenChecked = false;
+    }
+}
+
+public class StoredCursorMove
 {
     public Vector3 storedRotation;
     public bool hasBeenChecked;
 
-    public StoredPlayerFire(Vector3 p_storedRotation)
+    public StoredCursorMove(Vector3 p_storedRotation)
     {
         storedRotation = p_storedRotation;
         hasBeenChecked = false;
@@ -31,26 +27,26 @@ public class StoredPlayerFire
 }
 
 [System.Serializable]
-public class TargetInfoMessage
+public class Vector3Event : UnityEvent<Vector3>
 {
-    public string type = "targetInfo";
-    public string targetName;
-    public string targetDescription;
+}
+
+[System.Serializable]
+public class WebSocketParamEvent: UnityEvent<WebSocket>
+{
 }
 
 public class SocketTest : MonoBehaviour {
 
     public string serverURL;
-    Vector3 storedRotation;
     WebSocket webSocket;
-    public UnityEngine.UI.Image cursorImage;
-    RectTransform cursorPosition;
     public Camera camera;
-    public float cursorSensitivity = 20;
 
+    List<StoredCursorMove> queuedCursorMoves;
     List<StoredPlayerFire> queuedPlayerFires;
 
-    public UnityEngine.Event fireEvent;
+    public Vector3Event cursorMoveEvent;
+    public WebSocketParamEvent fireEvent;
     
 
     // Use this for initialization
@@ -58,7 +54,7 @@ public class SocketTest : MonoBehaviour {
     {
         // Init non socket connection related stuff
         queuedPlayerFires = new List<StoredPlayerFire>();
-        cursorPosition = cursorImage.GetComponent<RectTransform>();
+        queuedCursorMoves = new List<StoredCursorMove>();
         webSocket = new WebSocket(serverURL);
 
         // Open the socket
@@ -78,36 +74,21 @@ public class SocketTest : MonoBehaviour {
 
     private void Update() {
         // Set the rotation (used to drive the cursor)
-        Vector3 aimForward = Quaternion.Euler(storedRotation) * Vector3.forward;
-        cursorPosition.anchoredPosition = new Vector3(aimForward.x * cursorSensitivity, aimForward.y  * cursorSensitivity, 0);
 
-        // Do player fire events
+        //debug line
+        //Color color = new Color(0.0f, 0.0f, 1.0f);
+        //Debug.DrawLine(Vector3.zero, aimForward * 20.0f, Color.green, 2.0f);
+
+        foreach (StoredCursorMove move in queuedCursorMoves)
+        {
+            cursorMoveEvent.Invoke(move.storedRotation);
+            move.hasBeenChecked = true;
+        }
+        queuedCursorMoves.RemoveAll(x => x.hasBeenChecked == true);
+
         foreach (StoredPlayerFire fire in queuedPlayerFires)
         {
-            // Actually firing the rays right here is a horrible design but this is a one day proof of concept
-            // so yeah
-
-            // Bit shift the index of the layer (9) to get a bit mask
-            // Only casts on layer 9 (targets)
-            int layerMask = 1 << 9;
-
-            RaycastHit hit;
-            // Does the ray intersect any objects on layer 9
-            var Ray = camera.ScreenPointToRay(cursorPosition.position);
-            if (Physics.Raycast(Ray, out hit, 70.0f, layerMask))
-            {
-                // Get the target info component
-                Debug.Log("Did Hit");
-                TargetParent targetWeHit = hit.collider.gameObject.GetComponent<TargetParent>();
-                // Send message with target stuff
-                TargetInfoMessage msg = new TargetInfoMessage();
-                msg.targetName = targetWeHit.targetInfo.targetName;
-                msg.targetDescription = targetWeHit.targetInfo.targetDescription;
-                msg.type = "targetInfo";
-                targetWeHit.DoHit();
-                webSocket.Send(JsonUtility.ToJson(msg));
-            }
-
+            fireEvent.Invoke(webSocket);
             fire.hasBeenChecked = true;
         }
         queuedPlayerFires.RemoveAll(x => x.hasBeenChecked == true);
@@ -140,14 +121,11 @@ public class SocketTest : MonoBehaviour {
         {
             case "rotate":
                 RotationMessage rotMsg = JsonUtility.FromJson<RotationMessage>(e.Data);
-                storedRotation.x = -rotMsg.x;
-                storedRotation.y = -(rotMsg.z + 90 + 180);
-                storedRotation.z = -rotMsg.y;
+                Vector3 ourVector = new Vector3(rotMsg.x, rotMsg.y, rotMsg.z);
+                queuedCursorMoves.Add(new StoredCursorMove(ourVector));
                 break;
             case "fire":
-                Quaternion quat = Quaternion.Euler(storedRotation);
-                queuedPlayerFires.Add(new StoredPlayerFire(quat * Vector3.forward));
-                Debug.Log("do fire stuff");
+                queuedPlayerFires.Add(new StoredPlayerFire());
                 break;
         }
     }

@@ -5256,6 +5256,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 147.058, y: -192.056, z: -171.786}
+--- !u!1 &196658050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 196658052}
+  - component: {fileID: 196658051}
+  m_Layer: 0
+  m_Name: PhoneCursor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &196658051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 196658050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a8784295a771904abcad8ff0deeba36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorPosition: {fileID: 1040912872}
+  cursorSensitivity: 1250
+  camera: {fileID: 534669904}
+--- !u!4 &196658052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 196658050}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.696091, y: 6.682355, z: -20.718712}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &209667117
 Prefab:
   m_ObjectHideFlags: 0
@@ -12019,9 +12062,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serverURL: wss://llapresi-socket.herokuapp.com
-  cursorImage: {fileID: 1040912873}
   camera: {fileID: 534669904}
-  cursorSensitivity: 2000
+  cursorMoveEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 196658051}
+        m_MethodName: SetStoredRotation
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Vector3Event, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  fireEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 196658051}
+        m_MethodName: Fire
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: WebSocketParamEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!4 &1669621499
 Transform:
   m_ObjectHideFlags: 0
@@ -12029,7 +12101,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1669621497}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.009, y: 0, z: -19.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
