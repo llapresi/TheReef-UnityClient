@@ -9,6 +9,16 @@ public class RotationMessage
     public float x;
     public float y;
     public float z;
+    public int id;
+}
+
+[System.Serializable]
+public class FireMessage
+{
+    public string type;
+    public int id;
+    //for later gripping functionality
+    //public bool held;
 }
 
 [System.Serializable]
@@ -18,9 +28,17 @@ public class CommonTypeMessage
 }
 
 [System.Serializable]
+public class UserConnectMessage
+{
+    public string type;
+    public int id;
+}
+
+[System.Serializable]
 public class TargetInfoMessage
 {
     public string type = "targetInfo";
     public string targetName;
     public string targetDescription;
+    public int userID;
 }

@@ -7,7 +7,9 @@ public class PhoneCursor : MonoBehaviour {
 
     public RectTransform cursorPosition;
     public float cursorSensitivity = 20;
-    public Camera camera;
+    private Camera camera;
+    public int userID;
+    public GameObject cursorPrefab;
 
     Vector3 storedRotation;
 
@@ -20,7 +22,13 @@ public class PhoneCursor : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-	}
+        camera = Camera.main;
+        GameObject newUICursor = Instantiate(cursorPrefab);
+        GameObject uiCanvas = GameObject.Find("Canvas");
+        newUICursor.transform.SetParent(uiCanvas.transform);
+        cursorPosition = newUICursor.GetComponent<RectTransform>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -50,8 +58,14 @@ public class PhoneCursor : MonoBehaviour {
             msg.targetName = targetWeHit.targetInfo.targetName;
             msg.targetDescription = targetWeHit.targetInfo.targetDescription;
             msg.type = "targetInfo";
+            msg.userID = userID;
             targetWeHit.DoHit();
             webSocket.Send(JsonUtility.ToJson(msg));
         }
+    }
+
+    void OnDestroy()
+    {
+        Destroy(cursorPosition.gameObject);
     }
 }
