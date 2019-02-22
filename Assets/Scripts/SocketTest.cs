@@ -7,12 +7,10 @@ using System.Linq;
 
 public class StoredPlayerFire
 {
-    public bool hasBeenChecked;
     public int userID;
 
     public StoredPlayerFire(int p_id)
     {
-        hasBeenChecked = false;
         userID = p_id;
     }
 }
@@ -20,25 +18,13 @@ public class StoredPlayerFire
 public class StoredCursorMove
 {
     public Vector3 storedRotation;
-    public bool hasBeenChecked;
     public int userID;
 
     public StoredCursorMove(Vector3 p_storedRotation, int p_id)
     {
         storedRotation = p_storedRotation;
-        hasBeenChecked = false;
         userID = p_id;
     }
-}
-
-[System.Serializable]
-public class Vector3Event : UnityEvent<Vector3>
-{
-}
-
-[System.Serializable]
-public class WebSocketParamEvent: UnityEvent<WebSocket>
-{
 }
 
 public class SocketTest : MonoBehaviour {
@@ -49,23 +35,27 @@ public class SocketTest : MonoBehaviour {
     public List<PhoneCursor> users;
     public GameObject phoneCursorPrefab;
 
-    List<StoredCursorMove> queuedCursorMoves;
-    List<StoredPlayerFire> queuedPlayerFires;
-    List<int> queuedUsers;
-    List<int> queuedDisconnects;
+    //List<StoredCursorMove> queuedCursorMoves;
+    //List<StoredPlayerFire> queuedPlayerFires;
+    //List<int> queuedUsers;
+    //List<int> queuedDisconnects;
 
-    public Vector3Event cursorMoveEvent;
-    public WebSocketParamEvent fireEvent;
-    
+    // Newer threaded queues
+    ThreadLockedQueue<int> queuedUsers;
+    ThreadLockedQueue<int> queuedDisconnects;
+
+    ThreadLockedQueue<StoredCursorMove> queuedCursorMoves;
+    ThreadLockedQueue<StoredPlayerFire> queuedPlayerFires;
+
 
     // Use this for initialization
     void Start()
     {
         // Init non socket connection related stuff
-        queuedPlayerFires = new List<StoredPlayerFire>();
-        queuedCursorMoves = new List<StoredCursorMove>();
-        queuedUsers = new List<int>();
-        queuedDisconnects = new List<int>();
+        queuedPlayerFires = new ThreadLockedQueue<StoredPlayerFire>();
+        queuedCursorMoves = new ThreadLockedQueue<StoredCursorMove>();
+        queuedUsers = new ThreadLockedQueue<int>();
+        queuedDisconnects = new ThreadLockedQueue<int>();
         users = new List<PhoneCursor>();
         webSocket = new WebSocket(serverURL);
 
@@ -80,7 +70,7 @@ public class SocketTest : MonoBehaviour {
         if (!webSocket.IsAlive)
         {
             Debug.Log("Connecting...");
-            webSocket.ConnectAsync();
+            webSocket.Connect();
         }
     }
 
@@ -92,8 +82,9 @@ public class SocketTest : MonoBehaviour {
         //Debug.DrawLine(Vector3.zero, aimForward * 20.0f, Color.green, 2.0f);
 
         //Make queuedCursorMoves a new list, so changing it doesnt throw err
-        foreach (StoredCursorMove move in queuedCursorMoves)
+        while(queuedCursorMoves.Count() > 0)
         {
+            StoredCursorMove move = queuedCursorMoves.Dequeue();
             foreach (PhoneCursor user in users)
             {
                 if (user.userID == move.userID)
@@ -101,15 +92,11 @@ public class SocketTest : MonoBehaviour {
                     user.SetStoredRotation(move.storedRotation);
                 }
             }
-            //cursorMoveEvent.Invoke(move.storedRotation);
-            move.hasBeenChecked = true;
-            //queuedCursorMoves.Remove(move);
         }
 
-        queuedCursorMoves.RemoveAll(x => x.hasBeenChecked == true);
-
-        foreach (StoredPlayerFire fire in queuedPlayerFires)
+        while(queuedPlayerFires.Count() > 0)
         {
+            StoredPlayerFire fire = queuedPlayerFires.Dequeue();
             foreach (PhoneCursor user in users)
             {
                 if (user.userID == fire.userID)
@@ -117,39 +104,29 @@ public class SocketTest : MonoBehaviour {
                     user.Fire(webSocket);
                 }
             }
-            //fireEvent.Invoke(webSocket);
-            fire.hasBeenChecked = true;
         }
-        queuedPlayerFires.RemoveAll(x => x.hasBeenChecked == true);
 
-        for (int i = queuedUsers.Count - 1; i >= 0; i--)
+        while(queuedUsers.Count() > 0)
         {
             GameObject phoneCursor = Instantiate(phoneCursorPrefab);
             PhoneCursor phoneComp = phoneCursor.GetComponent<PhoneCursor>();
-            phoneComp.userID = queuedUsers[i];
+            phoneComp.userID = queuedUsers.Dequeue();
             //Add user to list
             users.Add(phoneComp);
-            queuedUsers.RemoveAt(i);
         }
 
-        for (int i = queuedDisconnects.Count - 1; i >= 0; i--)
+        while(queuedDisconnects.Count() > 0)
         {
-            foreach (PhoneCursor user in users)
+            int disconnectedUser = queuedDisconnects.Dequeue();
+            for (int q = users.Count - 1; q >= 0; q--)
             {
-                if (user.userID == queuedDisconnects[i])
+                PhoneCursor user = users[q];
+                if (user.userID == disconnectedUser)
                 {
+                    users.Remove(user);
                     GameObject.Destroy(user.gameObject);
                 }
             }
-            queuedDisconnects.RemoveAt(i);
-        }
-    }
-
-    private void OnDestroy()
-    {
-        if (webSocket != null)
-        {
-            webSocket.Close();
         }
     }
 
@@ -173,19 +150,19 @@ public class SocketTest : MonoBehaviour {
             case "rotate":
                 RotationMessage rotMsg = JsonUtility.FromJson<RotationMessage>(e.Data);
                 Vector3 ourVector = new Vector3(rotMsg.x, rotMsg.y, rotMsg.z);
-                queuedCursorMoves.Add(new StoredCursorMove(ourVector, rotMsg.id));
+                queuedCursorMoves.Enqueue(new StoredCursorMove(ourVector, rotMsg.id));
                 break;
             case "fire":
                 FireMessage fireMsg = JsonUtility.FromJson<FireMessage>(e.Data);
-                queuedPlayerFires.Add(new StoredPlayerFire(fireMsg.id));
+                queuedPlayerFires.Enqueue(new StoredPlayerFire(fireMsg.id));
                 break;
             case "userConnect":
                 UserConnectMessage userMsg = JsonUtility.FromJson<UserConnectMessage>(e.Data);
-                queuedUsers.Add(userMsg.id);
+                queuedUsers.Enqueue(userMsg.id);
                 break;
             case "userDisconnect":
                 UserConnectMessage userDCMsg = JsonUtility.FromJson<UserConnectMessage>(e.Data);
-                queuedDisconnects.Add(userDCMsg.id);             
+                queuedDisconnects.Enqueue(userDCMsg.id);             
                 break;
         }
     }
@@ -193,6 +170,7 @@ public class SocketTest : MonoBehaviour {
     private void OnCloseHandler(object sender, CloseEventArgs e)
     {
         Debug.Log("OnCloseHandler | code: " + e.Code + " reason: " + e.Reason);
+        webSocket.Close();
     }
 
     private void OnSendComplete(bool success)
