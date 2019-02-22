@@ -81,7 +81,6 @@ public class SocketTest : MonoBehaviour {
         //Color color = new Color(0.0f, 0.0f, 1.0f);
         //Debug.DrawLine(Vector3.zero, aimForward * 20.0f, Color.green, 2.0f);
 
-        //Make queuedCursorMoves a new list, so changing it doesnt throw err
         while(queuedCursorMoves.Count() > 0)
         {
             StoredCursorMove move = queuedCursorMoves.Dequeue();
@@ -130,6 +129,14 @@ public class SocketTest : MonoBehaviour {
         }
     }
 
+    private void OnDestroy()
+    {
+        if(webSocket.IsAlive)
+        {
+            webSocket.Close();
+        }
+    }
+
     private void OnOpenHandler(object sender, EventArgs e)
     {
         // Log our connection to WS server
@@ -170,7 +177,6 @@ public class SocketTest : MonoBehaviour {
     private void OnCloseHandler(object sender, CloseEventArgs e)
     {
         Debug.Log("OnCloseHandler | code: " + e.Code + " reason: " + e.Reason);
-        webSocket.Close();
     }
 
     private void OnSendComplete(bool success)
