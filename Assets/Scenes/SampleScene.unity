@@ -5221,7 +5221,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -5607,7 +5607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: e677359a0fb4f1e4db9d34dccac60242, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 4e119e80de1240b4abbce68147648511, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1
@@ -5758,7 +5758,7 @@ GameObject:
   - component: {fileID: 448173086}
   - component: {fileID: 448173085}
   m_Layer: 0
-  m_Name: Background
+  m_Name: FarBackgroundCoral
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11790,7 +11790,7 @@ GameObject:
   - component: {fileID: 1602423266}
   - component: {fileID: 1602423265}
   m_Layer: 0
-  m_Name: Background (1)
+  m_Name: Coral Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11954,15 +11954,6 @@ MonoBehaviour:
   users: []
   phoneCursorPrefab: {fileID: 1438801435348502, guid: d6f04f8ef0d31dd44a80f3038ae637b2,
     type: 2}
-  cursorMoveEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Vector3Event, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  fireEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: WebSocketParamEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!4 &1669621499
 Transform:
   m_ObjectHideFlags: 0
