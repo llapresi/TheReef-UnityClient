@@ -8,10 +8,12 @@ using System.Linq;
 public class StoredPlayerFire
 {
     public int userID;
+    public bool isHeld;
 
-    public StoredPlayerFire(int p_id)
+    public StoredPlayerFire(int p_id, bool p_isHeld)
     {
         userID = p_id;
+        isHeld = p_isHeld;
     }
 }
 
@@ -100,7 +102,15 @@ public class SocketTest : MonoBehaviour {
             {
                 if (user.userID == fire.userID)
                 {
-                    user.Fire(webSocket);
+                    if (fire.isHeld)
+                    {
+                       user.Release(webSocket);
+                    }
+                    else
+                    {
+                       user.Fire(webSocket);
+                    }
+
                 }
             }
         }
@@ -161,7 +171,7 @@ public class SocketTest : MonoBehaviour {
                 break;
             case "fire":
                 FireMessage fireMsg = JsonUtility.FromJson<FireMessage>(e.Data);
-                queuedPlayerFires.Enqueue(new StoredPlayerFire(fireMsg.id));
+                queuedPlayerFires.Enqueue(new StoredPlayerFire(fireMsg.id, fireMsg.held));
                 break;
             case "userConnect":
                 UserConnectMessage userMsg = JsonUtility.FromJson<UserConnectMessage>(e.Data);

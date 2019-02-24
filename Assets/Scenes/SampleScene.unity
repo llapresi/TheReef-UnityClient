@@ -546,6 +546,9 @@ MonoBehaviour:
   targetInfo: {fileID: 148640984}
   Collider: {fileID: 148640982}
   ourRenderer: {fileID: 1996215935}
+  heldBy: {fileID: 0}
+  isYeeting: 0
+  yeetSpeed: {x: -1, y: 1}
 --- !u!111 &148640986
 Animation:
   m_ObjectHideFlags: 0
@@ -12629,6 +12632,9 @@ MonoBehaviour:
   targetInfo: {fileID: 1956567032}
   Collider: {fileID: 1956567033}
   ourRenderer: {fileID: 229323712}
+  heldBy: {fileID: 0}
+  isYeeting: 0
+  yeetSpeed: {x: -20, y: 50}
 --- !u!4 &1956567035
 Transform:
   m_ObjectHideFlags: 0

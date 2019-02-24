@@ -7,16 +7,17 @@ public class PhoneCursor : MonoBehaviour {
 
     public RectTransform cursorPosition;
     public float cursorSensitivity = 20;
-    private Camera camera;
+    public Camera camera;
     public int userID;
     public GameObject cursorPrefab;
+    public TargetParent heldItem;
 
     Vector3 storedRotation;
 
     public void SetStoredRotation(Vector3 p_rotation)
     {
         storedRotation.x = -p_rotation.x;
-        storedRotation.y = -(p_rotation.z + 90 + 180);
+        storedRotation.y = -(p_rotation.z);
         storedRotation.z = -p_rotation.y;
     }
 
@@ -27,7 +28,8 @@ public class PhoneCursor : MonoBehaviour {
         GameObject uiCanvas = GameObject.Find("Canvas");
         newUICursor.transform.SetParent(uiCanvas.transform);
         cursorPosition = newUICursor.GetComponent<RectTransform>();
-
+        UnityEngine.UI.Image cursorImage = newUICursor.GetComponent<UnityEngine.UI.Image>();
+        cursorImage.color = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f, 1f, 1f);
     }
 	
 	// Update is called once per frame
@@ -55,13 +57,25 @@ public class PhoneCursor : MonoBehaviour {
             TargetParent targetWeHit = hit.collider.gameObject.GetComponent<TargetParent>();
             // Send message with target stuff
             TargetInfoMessage msg = new TargetInfoMessage();
+            heldItem = targetWeHit;
             msg.targetName = targetWeHit.targetInfo.targetName;
             msg.targetDescription = targetWeHit.targetInfo.targetDescription;
             msg.type = "targetInfo";
             msg.userID = userID;
-            targetWeHit.DoHit();
+            targetWeHit.DoHit(this);
             webSocket.Send(JsonUtility.ToJson(msg));
         }
+    }
+
+    public void Release(WebSocket webSocket)
+    {
+        if (heldItem != null)
+        {
+            heldItem.DoYeet();
+            heldItem.heldBy = null;
+            heldItem = null;
+        }
+
     }
 
     void OnDestroy()

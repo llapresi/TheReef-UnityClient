@@ -18,7 +18,7 @@ public class FireMessage
     public string type;
     public int id;
     //for later gripping functionality
-    //public bool held;
+    public bool held;
 }
 
 [System.Serializable]
