@@ -37,7 +37,6 @@ public class PhoneCursor : MonoBehaviour {
         offset = new Vector3(0.0f, 0.0f, 0.0f);
         RectTransform canvasSize = uiCanvas.GetComponent<RectTransform>();
         screenDimensions = new Vector2(canvasSize.rect.width, canvasSize.rect.height);
-        Debug.Log("Screen Dimensions: " + screenDimensions);
     }
 	
 	// Update is called once per frame

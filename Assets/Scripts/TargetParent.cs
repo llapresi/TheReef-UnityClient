@@ -31,6 +31,7 @@ public class TargetParent : MonoBehaviour {
         {
             Vector2 deltaYeet = new Vector2(yeetSpeed.x * Time.deltaTime, yeetSpeed.y * Time.deltaTime);
             this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + deltaYeet.y, this.transform.position.z + deltaYeet.x);
+            DestroyIfYeetComplete();
         }
 	}
 
@@ -43,6 +44,14 @@ public class TargetParent : MonoBehaviour {
     public void DoYeet()
     {
         isYeeting = true;
+    }
+
+    public void DestroyIfYeetComplete()
+    {
+        if (this.transform.position.y >= 100.0f)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     IEnumerator ChangeColor()
