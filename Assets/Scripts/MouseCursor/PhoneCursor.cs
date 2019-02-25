@@ -11,6 +11,9 @@ public class PhoneCursor : MonoBehaviour {
     public int userID;
     public GameObject cursorPrefab;
     public TargetParent heldItem;
+    public Vector3 offset;
+    public Vector3 screenDimensions;
+    public float edgeOffset;
 
     Vector3 storedRotation;
 
@@ -26,16 +29,23 @@ public class PhoneCursor : MonoBehaviour {
         camera = Camera.main;
         GameObject newUICursor = Instantiate(cursorPrefab);
         GameObject uiCanvas = GameObject.Find("Canvas");
+        //uiCanvas.GetComponent<Canvas>().worldCamera.
         newUICursor.transform.SetParent(uiCanvas.transform);
         cursorPosition = newUICursor.GetComponent<RectTransform>();
+        cursorPosition.localScale = Vector3.one;
         UnityEngine.UI.Image cursorImage = newUICursor.GetComponent<UnityEngine.UI.Image>();
         cursorImage.color = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f, 1f, 1f);
+        offset = new Vector3(0.0f, 0.0f, 0.0f);
+        RectTransform canvasSize = uiCanvas.GetComponent<RectTransform>();
+        screenDimensions = new Vector2(canvasSize.rect.width, canvasSize.rect.height);
+        Debug.Log("Screen Dimensions: " + screenDimensions);
     }
 	
 	// Update is called once per frame
 	void Update () {
         Vector3 aimForward = Quaternion.Euler(storedRotation) * Vector3.forward;
         cursorPosition.anchoredPosition = new Vector3(aimForward.x * cursorSensitivity, aimForward.y * cursorSensitivity, 0);
+        checkOffset();
     }
 
     public void Fire(WebSocket webSocket)
@@ -81,5 +91,19 @@ public class PhoneCursor : MonoBehaviour {
     void OnDestroy()
     {
         Destroy(cursorPosition.gameObject);
+    }
+
+    void checkOffset()
+    {
+        Debug.Log((-screenDimensions.x) + edgeOffset);
+        Debug.Log(cursorPosition.anchoredPosition.x);
+        if (cursorPosition.anchoredPosition.x < (-screenDimensions.x) + edgeOffset)
+        {
+            Debug.Log("Left of Screen");
+        }
+        if (cursorPosition.anchoredPosition.y < -screenDimensions.y)
+        {
+            Debug.Log("Bottom of Screen");
+        }
     }
 }

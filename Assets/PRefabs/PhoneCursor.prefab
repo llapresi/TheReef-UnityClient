@@ -53,6 +53,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorPosition: {fileID: 0}
   cursorSensitivity: 1250
+  camera: {fileID: 0}
   userID: 0
   cursorPrefab: {fileID: 1612356089059158, guid: 7c841c59044cd3346a757d9e379cd90b,
     type: 2}
+  heldItem: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
+  screenDimensions: {x: 0, y: 0, z: 0}
+  edgeOffset: 400
