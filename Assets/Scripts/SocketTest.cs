@@ -98,11 +98,12 @@ public class SocketTest : MonoBehaviour {
         while(queuedPlayerFires.Count() > 0)
         {
             StoredPlayerFire fire = queuedPlayerFires.Dequeue();
+            Debug.Log("Fire Msg | IsHeld: " + fire.isHeld + " | User ID: " + fire.userID);
             foreach (PhoneCursor user in users)
             {
                 if (user.userID == fire.userID)
                 {
-                    if (fire.isHeld)
+                    if (!fire.isHeld)
                     {
                        user.Release(webSocket);
                     }
