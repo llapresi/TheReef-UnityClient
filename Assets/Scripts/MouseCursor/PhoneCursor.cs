@@ -13,7 +13,6 @@ public class PhoneCursor : MonoBehaviour {
     public TargetParent heldItem;
     public Vector3 offset;
     public Vector3 screenDimensions;
-    public float edgeOffset;
 
     Vector3 storedRotation;
 
@@ -43,8 +42,6 @@ public class PhoneCursor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 aimForward = Quaternion.Euler(storedRotation) * Vector3.forward;
-        cursorPosition.anchoredPosition = new Vector3(aimForward.x * cursorSensitivity, aimForward.y * cursorSensitivity, 0);
         checkOffset();
     }
 
@@ -95,15 +92,39 @@ public class PhoneCursor : MonoBehaviour {
 
     void checkOffset()
     {
-        Debug.Log((-screenDimensions.x) + edgeOffset);
-        Debug.Log(cursorPosition.anchoredPosition.x);
-        if (cursorPosition.anchoredPosition.x < (-screenDimensions.x) + edgeOffset)
+        //Get distance to our edges
+        float halfWidth = (screenDimensions.x) / 2;
+        float halfHeight = (screenDimensions.y) / 2;
+
+        //Normal Movement
+        Vector3 aimForward = Quaternion.Euler(storedRotation) * Vector3.forward;
+        cursorPosition.anchoredPosition = new Vector3(aimForward.x * cursorSensitivity, aimForward.y * cursorSensitivity, 0);
+
+        //Our cursors XY coords
+        float tempX = cursorPosition.anchoredPosition.x;
+        float tempY = cursorPosition.anchoredPosition.y;
+
+        //If they hit any edges, lock the position to that edge
+        if (cursorPosition.anchoredPosition.x < (-halfWidth))
         {
-            Debug.Log("Left of Screen");
+            //Left Edge
+            cursorPosition.anchoredPosition = new Vector3(-halfWidth, tempY, 0);
         }
-        if (cursorPosition.anchoredPosition.y < -screenDimensions.y)
+        if (cursorPosition.anchoredPosition.y < (-halfHeight))
         {
-            Debug.Log("Bottom of Screen");
+            //Bottom Edge
+            cursorPosition.anchoredPosition = new Vector3(tempX, (-halfHeight), 0);
         }
+        if (cursorPosition.anchoredPosition.x > (halfWidth))
+        {
+            //Right Edge
+            cursorPosition.anchoredPosition = new Vector3(halfWidth, tempY, 0);
+        }
+        if (cursorPosition.anchoredPosition.y > (halfHeight))
+        {
+            //Top Edge
+            cursorPosition.anchoredPosition = new Vector3(tempX, (halfHeight), 0);
+        }
+        
     }
 }

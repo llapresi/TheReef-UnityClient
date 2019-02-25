@@ -22,7 +22,7 @@ public class TargetParent : MonoBehaviour {
 	void Update () {
 		if(heldBy != null)
         {
-            Vector3 cursorPosAtOurZ = new Vector3(heldBy.cursorPosition.transform.position.x, heldBy.cursorPosition.transform.position.y, 50.0f);
+            Vector3 cursorPosAtOurZ = new Vector3(heldBy.cursorPosition.transform.position.x, heldBy.cursorPosition.transform.position.y, 80.0f);
             Vector3 newPosition = heldBy.camera.ScreenToWorldPoint(cursorPosAtOurZ);
             this.transform.position = newPosition;
         }
