@@ -10,12 +10,22 @@ public class TargetParent : MonoBehaviour {
     public Renderer ourRenderer;
     public PhoneCursor heldBy;
     public bool isYeeting;
+    float yeetProgress;
     //Negative z: come toward you. y: go up
-    public Vector2 yeetSpeed = new Vector2(-20.0f, 50.0f);
+    public float yeetSpeed;
+
+    [Range(0.1f, 1.0f)]
+    public float yeetMidpointPosition;
+    public float yeetMidpointHeight;
+    public bool debugYeet = false;
+
+    // Array of our 3 yeet positions
+    Vector3[] yeetPoints;
 
 
 	void Start () {
-
+        yeetProgress = 0.0f;
+        yeetPoints = new Vector3[3];
     }
 	
 	// Update is called once per frame
@@ -29,9 +39,21 @@ public class TargetParent : MonoBehaviour {
 
         if (isYeeting)
         {
-            Vector2 deltaYeet = new Vector2(yeetSpeed.x * Time.deltaTime, yeetSpeed.y * Time.deltaTime);
-            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + deltaYeet.y, this.transform.position.z + deltaYeet.x);
-            DestroyIfYeetComplete();
+            yeetProgress += Time.deltaTime * yeetSpeed;
+            Vector3 yeetStartMidPoint = Vector3.Lerp(yeetPoints[0], yeetPoints[1], yeetProgress);
+            Vector3 yeetMidEndPoint = Vector3.Lerp(yeetPoints[1], yeetPoints[2], yeetProgress);
+            Vector3 newYeetPosition = Vector3.Lerp(yeetStartMidPoint, yeetMidEndPoint, yeetProgress);
+            transform.position = newYeetPosition;
+            if (!debugYeet)
+            {
+                DestroyIfYeetComplete();
+            }
+            else if (yeetProgress >= 1.0f)
+            {
+                yeetProgress = 0;
+                MakeNewYeetMidPoint();
+                MakeNewYeetEndpoint();
+            }
         }
 	}
 
@@ -44,11 +66,27 @@ public class TargetParent : MonoBehaviour {
     public void DoYeet()
     {
         isYeeting = true;
+        // Set our yeet start point
+        yeetPoints[0] = this.transform.position;
+        // Get end point of our yeet from the Scene
+        MakeNewYeetEndpoint();
+        // Make our yeet middle node
+        MakeNewYeetMidPoint();
+    }
+
+    public void MakeNewYeetMidPoint()
+    {
+        yeetPoints[1] = Vector3.Lerp(yeetPoints[0], yeetPoints[2], yeetMidpointPosition);
+        yeetPoints[1].y = yeetMidpointHeight;
+    }
+    public void MakeNewYeetEndpoint()
+    {
+        yeetPoints[2] = GameObject.Find("YeetEndpoint").transform.position;
     }
 
     public void DestroyIfYeetComplete()
     {
-        if (this.transform.position.y >= 100.0f)
+        if (yeetProgress >= 1.0f)
         {
             Destroy(this.gameObject);
         }

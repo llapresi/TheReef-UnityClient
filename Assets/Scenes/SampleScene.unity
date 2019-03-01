@@ -476,9 +476,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 148640983}
-  - component: {fileID: 148640982}
-  - component: {fileID: 148640985}
-  - component: {fileID: 148640984}
   - component: {fileID: 148640986}
   m_Layer: 9
   m_Name: Bottle
@@ -487,68 +484,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &148640982
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 148640981}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.75, y: 5.03, z: 1.75}
-  m_Center: {x: 0, y: 0.36, z: 0}
 --- !u!4 &148640983
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 148640981}
-  m_LocalRotation: {x: -0, y: -0, z: -0.14940508, w: 0.9887761}
-  m_LocalPosition: {x: 19.4, y: 7.219306, z: 28.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4.143501, y: 4.143501, z: 4.143501}
   m_Children:
   - {fileID: 1242492080}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -17.185001}
---- !u!114 &148640984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 148640981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd4bce6447bf5de4bb00ceb68db5a61a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetName: Plastic Bottle
-  targetDescription: 'Plastic bottles are hazardous for the reef as they place dangerous
-    chemicals in
-
-    the enviroment and do not degrade in a manner that is helpful to the enviroment.
-
-
-'
---- !u!114 &148640985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 148640981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ece3425b71ba324c8044912cfb0f6ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetInfo: {fileID: 148640984}
-  Collider: {fileID: 148640982}
-  ourRenderer: {fileID: 1996215935}
-  heldBy: {fileID: 0}
-  isYeeting: 0
-  yeetSpeed: {x: -1, y: 1}
+  m_Father: {fileID: 1848107471}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -19.648966}
 --- !u!111 &148640986
 Animation:
   m_ObjectHideFlags: 0
@@ -5481,7 +5430,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 229323711}
   m_LocalRotation: {x: 0.05963866, y: 0.9693602, z: -0.026831396, w: 0.23677878}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.63, y: 0.81, z: 5.75}
   m_LocalScale: {x: 12.8894615, y: 12.8894615, z: 25.011272}
   m_Children: []
   m_Father: {fileID: 1956567035}
@@ -11488,6 +11437,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4088650179677758, guid: a5b1d6f73e922cf458a349de5b76b929,
     type: 2}
   m_PrefabInternal: {fileID: 1336482693}
+--- !u!1 &1475137231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1475137232}
+  m_Layer: 0
+  m_Name: YeetEndpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1475137232
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1475137231}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.009, y: 6.6, z: -28.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1485257214
 Prefab:
   m_ObjectHideFlags: 0
@@ -12328,6 +12305,89 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4088650179677758, guid: a5b1d6f73e922cf458a349de5b76b929,
     type: 2}
   m_PrefabInternal: {fileID: 1189505569}
+--- !u!1 &1848107470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1848107471}
+  - component: {fileID: 1848107474}
+  - component: {fileID: 1848107473}
+  - component: {fileID: 1848107472}
+  m_Layer: 9
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1848107471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1848107470}
+  m_LocalRotation: {x: -0, y: -0, z: -0.14940508, w: 0.9887761}
+  m_LocalPosition: {x: 19.4, y: 7.219306, z: 28.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 148640983}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1848107472
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1848107470}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.88, y: 17.4, z: 5.96}
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &1848107473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1848107470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd4bce6447bf5de4bb00ceb68db5a61a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetName: Plastic Bottle
+  targetDescription: 'Plastic bottles are hazardous for the reef as they place dangerous
+    chemicals in
+
+    the enviroment and do not degrade in a manner that is helpful to the enviroment.
+
+
+'
+--- !u!114 &1848107474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1848107470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ece3425b71ba324c8044912cfb0f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetInfo: {fileID: 1848107473}
+  Collider: {fileID: 1848107472}
+  ourRenderer: {fileID: 1996215935}
+  heldBy: {fileID: 0}
+  isYeeting: 0
+  yeetSpeed: 1.58
+  yeetMidpointPosition: 0.316
+  yeetMidpointHeight: 29
+  debugYeet: 0
 --- !u!1001 &1851496621
 Prefab:
   m_ObjectHideFlags: 0
@@ -12634,7 +12694,10 @@ MonoBehaviour:
   ourRenderer: {fileID: 229323712}
   heldBy: {fileID: 0}
   isYeeting: 0
-  yeetSpeed: {x: -20, y: 50}
+  yeetSpeed: 1.58
+  yeetMidpointPosition: 0.302
+  yeetMidpointHeight: 29.6
+  debugYeet: 0
 --- !u!4 &1956567035
 Transform:
   m_ObjectHideFlags: 0
