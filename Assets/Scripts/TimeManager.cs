@@ -14,10 +14,13 @@ public class TimeManager : MonoBehaviour {
         time -= Time.deltaTime;
 
         float minutes = time / 60;
-        float seconds = time % 60;
+        int seconds = Mathf.RoundToInt(time % 60);
 
         //update label value
         timerText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+
+        //yo wtf
+        //Debug.Log(time / 60);
 
         EndGame();
     }

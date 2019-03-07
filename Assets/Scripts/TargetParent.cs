@@ -22,10 +22,20 @@ public class TargetParent : MonoBehaviour {
     // Array of our 3 yeet positions
     Vector3[] yeetPoints;
 
+    //Get our itemSpawning Manager
+    //so we can access its properties
+    private GameObject itemManager;
+    private ItemSpawning itemSpawnScript;
+    private float fallSpeed;
+
 
 	void Start () {
         yeetProgress = 0.0f;
         yeetPoints = new Vector3[3];
+
+        itemManager = GameObject.FindGameObjectWithTag("ItemManager");
+        itemSpawnScript = itemManager.GetComponent<ItemSpawning>();
+        fallSpeed = itemSpawnScript.fallSpeed;
     }
 	
 	// Update is called once per frame
@@ -54,6 +64,11 @@ public class TargetParent : MonoBehaviour {
                 MakeNewYeetMidPoint();
                 MakeNewYeetEndpoint();
             }
+        }
+
+        if (heldBy == null)
+        {
+            MoveDown();
         }
 	}
 
@@ -88,8 +103,34 @@ public class TargetParent : MonoBehaviour {
     {
         if (yeetProgress >= 1.0f)
         {
-            Destroy(this.gameObject);
+            DestroyItem();
+            //Since the player yeeted an object, increase the trash collection count
+            itemSpawnScript.totalTrashCollected++;
         }
+    }
+
+    //Move Object down, if too far down -> Destroy
+    public void MoveDown()
+    {
+        Vector3 tempPos = transform.position;
+        tempPos.y -= fallSpeed;
+        transform.position = tempPos;
+
+        if (tempPos.y <= -50.0f)
+        {
+            DestroyItem();
+        }
+    }
+
+    public void DestroyItem()
+    {
+        /*
+        if (itemSpawnScript.trashItems.Contains(gameObject))
+        {
+            itemSpawnScript.trashItems.Remove(gameObject);
+        }
+        */
+        Destroy(this.gameObject);
     }
 
     IEnumerator ChangeColor()

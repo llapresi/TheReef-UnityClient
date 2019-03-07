@@ -46,6 +46,11 @@ public class PhoneCursor : MonoBehaviour {
 
     public void Fire(WebSocket webSocket)
     {
+        //They shouldnt be able to pick up multiple trash items at once
+        if (heldItem != null)
+        {
+            return;
+        }
         // Actually firing the rays right here is a horrible design but this is a one day proof of concept
         // so yeah
 

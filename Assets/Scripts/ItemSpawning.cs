@@ -5,11 +5,15 @@ using UnityEngine;
 public class ItemSpawning : MonoBehaviour {
 
     public GameObject bottlePrefab;
+    //In the future we'll pick random prefabs of trash when we have more
+    //public GameObject[] trashPrefabs;
+
     public float spawnRate = 3.0f;
     public float fallSpeed = 0.5f;
     private float timeSinceLastSpawn = 0.0f;
 
     public int totalTrashMade = 0;
+    public int trashToSpawn = 100;
     public int totalTrashCollected = 0;
 
     //Dimensions of screen space
@@ -21,7 +25,7 @@ public class ItemSpawning : MonoBehaviour {
 
     public Transform[] spawnPoints;
 
-    private List<GameObject> trashItems;
+    public List<GameObject> trashItems;
 
 	// Use this for initialization
 	void Start () {
@@ -31,65 +35,45 @@ public class ItemSpawning : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        timeSinceLastSpawn += Time.deltaTime;
-		if (timeSinceLastSpawn >= spawnRate)
-        {
-            SpawnTrash();
-            timeSinceLastSpawn = 0.0f;
-        }
-        MoveTrash();
+        UpdateTiming();
 	}
 
     void SpawnTrash()
     {
-        for (int i = 0; i < spawnPoints.Length; i++)
-        { 
-
-            GameObject tempObj = Instantiate(bottlePrefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity, spawnPoints[i]);
-            //Get Parents location
-            Vector3 randomPosition = spawnPoints[i].position;
-
-            xRandomRange = 15.0f;
-            yRandomRange = 50.0f;
-
-            //Stagger the locations slightly, ideally this would be done with 1/16 of the scene width
-            randomPosition.x += Random.Range((-xRandomRange), xRandomRange);
-            randomPosition.y += Random.value * yRandomRange;
-
-            //Set that to our bottles location
-            tempObj.transform.position = randomPosition;
-
-            //Also give it a slight rotation
-            Vector3 tweakedRotation = tempObj.transform.eulerAngles;
-            tweakedRotation.z = (float)(Random.Range(0, 45) - 22.5);
-            tempObj.transform.eulerAngles = tweakedRotation;
-
-            //Add it to our list
-            trashItems.Add(tempObj);
-
-            //Incriment our trash made by 1 for each item made
-            //Whenever a trash is destroyed, we'll add it to totalTrashCollected
-            //at the end of the game we'll use the two to determine the % of the reef
-            totalTrashMade++;
-        }
-    }
-
-    void MoveTrash()
-    {
-        for ( int i = trashItems.Count - 1; i >= 0; i--)
-        { 
-            Vector3 tempPos = trashItems[i].transform.position;
-            tempPos.y -= fallSpeed;
-            trashItems[i].transform.position = tempPos;
-
-            //So we dont loop twice, just destroy trash in here if it falls too far down
-            if (tempPos.y <= -50)
+        if (totalTrashMade < trashToSpawn)
+        {
+            for (int i = 0; i < spawnPoints.Length; i++)
             {
-                Destroy(trashItems[i]);
-                trashItems.RemoveAt(i);
-            }
 
-        }
+                GameObject tempObj = Instantiate(bottlePrefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity, spawnPoints[i]);
+                //Get Parents location
+                Vector3 randomPosition = spawnPoints[i].position;
+
+                xRandomRange = 15.0f;
+                yRandomRange = 50.0f;
+
+                //Stagger the locations slightly, ideally this would be done with 1/16 of the scene width
+                randomPosition.x += Random.Range((-xRandomRange), xRandomRange);
+                randomPosition.y += Random.value * yRandomRange;
+
+                //Set that to our bottles location
+                tempObj.transform.position = randomPosition;
+
+                //Also give it a slight rotation
+                Vector3 tweakedRotation = tempObj.transform.eulerAngles;
+                tweakedRotation.z = (float)(Random.Range(0, 45) - 22.5);
+                tempObj.transform.eulerAngles = tweakedRotation;
+
+                //Add it to our list
+                //wait do we even need the list
+                //trashItems.Add(tempObj);
+
+                //Incriment our trash made by 1 for each item made
+                //Whenever a trash is destroyed, we'll add it to totalTrashCollected
+                //at the end of the game we'll use the two to determine the % of the reef
+                totalTrashMade++;
+            }//end for
+        }// end if      
     }
 
     //Some fancy positioning for our quadrants on start, but canvas is offset from the camera so the positions
@@ -120,4 +104,13 @@ public class ItemSpawning : MonoBehaviour {
             spawnPoints[i].position = new Vector3(xPos, fullHeight/2, this.transform.position.z);
         }
     }//End Initialize Spawn Points
+    void UpdateTiming()
+    {
+        timeSinceLastSpawn += Time.deltaTime;
+        if (timeSinceLastSpawn >= spawnRate)
+        {
+            SpawnTrash();
+            timeSinceLastSpawn = 0.0f;
+        }
+    }
 }
