@@ -11879,6 +11879,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   introText: {fileID: 1012320447}
   introTextTwo: {fileID: 675441281}
+  descText: {fileID: 1026850443}
+  descTextTwo: {fileID: 269863700}
+  prompt: {fileID: 1100250941}
 --- !u!4 &1378752820
 Transform:
   m_ObjectHideFlags: 0
