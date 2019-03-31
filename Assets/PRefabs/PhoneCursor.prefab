@@ -60,4 +60,3 @@ MonoBehaviour:
   heldItem: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
   screenDimensions: {x: 0, y: 0, z: 0}
-  edgeOffset: 400
