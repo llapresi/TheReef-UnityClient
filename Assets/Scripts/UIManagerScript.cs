@@ -109,7 +109,7 @@ public class UIManagerScript : MonoBehaviour {
         totalTime = 0.0f;
         uiTransitions = new List<UITransition>();
 
-        //(Text to display, time to enter, time to leave)
+        //(UI to display, time to enter, time to leave)
         uiTransitions.Add(new TextTransition(introText, 1.0f, 5.0f));
         uiTransitions.Add(new TextTransition(introTextTwo, 2.0f, 5.0f));
         uiTransitions.Add(new TextTransition(descText, 7.0f, 11.0f));

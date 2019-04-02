@@ -7,20 +7,27 @@ public class TimeManager : MonoBehaviour {
 
     public Text timerText;
 
-    public float time = 90; //default 90 seconds for now
+    public float time = 60; //default 90 seconds for now
 	
 	// Update is called once per frame
 	void Update () {
         time -= Time.deltaTime;
 
-        float minutes = time / 60;
+        float minutes = Mathf.Floor(time / 60);
         int seconds = Mathf.RoundToInt(time % 60);
 
-        //update label value
-        timerText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+        string minuteText = minutes.ToString("#0");
+        string secondText = seconds.ToString("00");
 
-        //yo wtf
-        //Debug.Log(time / 60);
+        //update label value
+        //Display minutes only if theres a minute to display
+        if (time > 60)
+        {
+            timerText.text = minuteText + ":" + secondText;
+        } else
+        {
+            timerText.text = secondText;
+        }
 
         EndGame();
     }
