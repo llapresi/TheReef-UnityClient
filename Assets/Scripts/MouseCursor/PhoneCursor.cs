@@ -13,6 +13,7 @@ public class PhoneCursor : MonoBehaviour {
     public TargetParent heldItem;
     public Vector3 offset;
     public Vector3 screenDimensions;
+    private Color cursorColor;
 
     Vector3 storedRotation;
 
@@ -33,7 +34,7 @@ public class PhoneCursor : MonoBehaviour {
         cursorPosition = newUICursor.GetComponent<RectTransform>();
         cursorPosition.localScale = Vector3.one;
         UnityEngine.UI.Image cursorImage = newUICursor.GetComponent<UnityEngine.UI.Image>();
-        cursorImage.color = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f, 1f, 1f);
+        cursorColor = cursorImage.color = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f, 1f, 1f);
         offset = new Vector3(0.0f, 0.0f, 0.0f);
         RectTransform canvasSize = uiCanvas.GetComponent<RectTransform>();
         screenDimensions = new Vector2(canvasSize.rect.width, canvasSize.rect.height);
@@ -61,7 +62,7 @@ public class PhoneCursor : MonoBehaviour {
         RaycastHit hit;
         // Does the ray intersect any objects on layer 9
         var Ray = camera.ScreenPointToRay(cursorPosition.position);
-        if (Physics.Raycast(Ray, out hit, 70.0f, layerMask))
+        if (Physics.Raycast(Ray, out hit, 100.0f, layerMask))
         {
             // Get the target info component
             Debug.Log("Did Hit");
@@ -75,6 +76,29 @@ public class PhoneCursor : MonoBehaviour {
             msg.userID = userID;
             targetWeHit.DoHit(this);
             webSocket.Send(JsonUtility.ToJson(msg));
+        }
+    }
+
+    public void ConstantFire(WebSocket webSocket)
+    {
+        // Bit shift the index of the layer (9) to get a bit mask
+        // Only casts on layer 9 (targets)
+        int layerMask = 1 << 9;
+
+        RaycastHit hit;
+        // Does the ray intersect any objects on layer 9
+        var Ray = camera.ScreenPointToRay(cursorPosition.position);
+        if (Physics.Raycast(Ray, out hit, 100.0f, layerMask))
+        {
+            // Get the target info component
+            Debug.Log("Did Hit");
+            
+            //Starting GameObject now
+            StartGame targetWeHit = hit.collider.gameObject.GetComponent<StartGame>();
+            //Let the target know we hit it
+            targetWeHit.isHovered = true;
+            targetWeHit.changingColor = cursorColor;
+            
         }
     }
 

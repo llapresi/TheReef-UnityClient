@@ -91,7 +91,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 112000002, guid: a9ee1c09dbde79c49bf876f215f9975e,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -12554,7 +12554,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1003026768442996, guid: 136ac1463528a5e47a220c7623da8c1b, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 111051228922717406, guid: 136ac1463528a5e47a220c7623da8c1b,
         type: 2}
@@ -12582,7 +12582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1956567032
 MonoBehaviour:
   m_ObjectHideFlags: 0

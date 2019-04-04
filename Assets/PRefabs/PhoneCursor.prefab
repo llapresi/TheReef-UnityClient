@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorPosition: {fileID: 0}
-  cursorSensitivity: 1250
+  cursorSensitivity: 3000
   camera: {fileID: 0}
   userID: 0
   cursorPrefab: {fileID: 1612356089059158, guid: 7c841c59044cd3346a757d9e379cd90b,

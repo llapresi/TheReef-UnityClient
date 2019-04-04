@@ -4,6 +4,7 @@ using System;
 using WebSocketSharp;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class StoredPlayerFire
 {
@@ -36,6 +37,7 @@ public class SocketTest : MonoBehaviour {
     public Camera camera;
     public List<PhoneCursor> users;
     public GameObject phoneCursorPrefab;
+    private Scene m_scene;
 
     //List<StoredCursorMove> queuedCursorMoves;
     //List<StoredPlayerFire> queuedPlayerFires;
@@ -60,6 +62,7 @@ public class SocketTest : MonoBehaviour {
         queuedDisconnects = new ThreadLockedQueue<int>();
         users = new List<PhoneCursor>();
         webSocket = new WebSocket(serverURL);
+        m_scene = SceneManager.GetActiveScene();
 
         // Open the socket
         Debug.Log(": Open socket: " + webSocket.ReadyState + " - Websocket Alive: " + webSocket.IsAlive);
@@ -79,10 +82,16 @@ public class SocketTest : MonoBehaviour {
     private void Update() {
         // Set the rotation (used to drive the cursor)
 
-        //debug line
-        //Color color = new Color(0.0f, 0.0f, 1.0f);
-        //Debug.DrawLine(Vector3.zero, aimForward * 20.0f, Color.green, 2.0f);
-
+        //If were in the intro scene, fire constantly. Can set this to some other check when we make it one scene
+        //Constant Raycast for Intro Scene
+        if (m_scene.name == "StartingScene")
+        {
+            foreach (PhoneCursor user in users)
+            {
+                    user.ConstantFire(webSocket);
+            }
+        }
+        
         while(queuedCursorMoves.Count() > 0)
         {
             StoredCursorMove move = queuedCursorMoves.Dequeue();
