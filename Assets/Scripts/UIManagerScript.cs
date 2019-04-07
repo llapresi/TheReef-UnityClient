@@ -16,9 +16,11 @@ public class UIManagerScript : MonoBehaviour {
     public Text prompt;       //Collect plastic
     public Text final;        //Journey
 
-    public Image bottle;
+    //public Image bottle;
     public Image bubble;
     public Image phone;
+
+    public UIBubbleImage bottle;
 
 
     public class UITransition
@@ -103,6 +105,32 @@ public class UIManagerScript : MonoBehaviour {
     }
 
 
+    public class BubbleGroupTransition : UITransition
+    {
+        public UIBubbleImage parent;
+
+        public BubbleGroupTransition(UIBubbleImage p_bubbleParent, float p_startTime, float p_endTime) : base(p_startTime, p_endTime)
+        {
+            parent = p_bubbleParent;
+            parent.CrossFadeAlphaAll(0.0f, 0.0f, false);
+        }
+
+        public override void FadeIn(float duration)
+        {
+            parent.CrossFadeAlphaAll(1.0f, duration, false);
+
+            // Start animations
+            parent.PlayAnimators();
+        }
+
+        public override void FadeOut(float duration)
+        {
+            parent.CrossFadeAlphaAll(0.0f, duration, false);
+        }
+
+    }
+
+
     // Use this for initialization
     void Start()
     {
@@ -117,7 +145,8 @@ public class UIManagerScript : MonoBehaviour {
         uiTransitions.Add(new TextTransition(prompt, 17.0f, 22.0f));
         uiTransitions.Add(new TextTransition(final, 31.0f, 35.0f));
 
-        uiTransitions.Add(new ImageTransition(bottle, 23.0f, 30.0f));
+        //uiTransitions.Add(new ImageTransition(bottle, 23.0f, 30.0f));
+        uiTransitions.Add(new BubbleGroupTransition(bottle, 23.0f, 30.0f));
         uiTransitions.Add(new ImageTransition(bubble, 23.0f, 30.0f));
         uiTransitions.Add(new ImageTransition(phone, 23.0f, 30.0f));
         
