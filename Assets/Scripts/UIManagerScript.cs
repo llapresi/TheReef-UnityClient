@@ -17,10 +17,9 @@ public class UIManagerScript : MonoBehaviour {
     public Text final;        //Journey
 
     //public Image bottle;
-    public Image phone;
-
     public UIBubbleImage bottle;
     public UIBubbleImage bubble;
+    public UIBubbleImage phone;
 
 
     public class UITransition
@@ -147,8 +146,8 @@ public class UIManagerScript : MonoBehaviour {
 
         //uiTransitions.Add(new ImageTransition(bottle, 23.0f, 30.0f));
         uiTransitions.Add(new BubbleGroupTransition(bottle, 23.0f, 30.0f));
-        uiTransitions.Add(new BubbleGroupTransition(bubble, 23.0f, 30.0f));
-        uiTransitions.Add(new ImageTransition(phone, 23.0f, 30.0f));
+        uiTransitions.Add(new BubbleGroupTransition(bubble, 25.0f, 30.0f));
+        uiTransitions.Add(new BubbleGroupTransition(phone, 27.0f, 30.0f));
         
         // Update is called once per frame
     }
