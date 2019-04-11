@@ -12856,7 +12856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2993ef60363c1a04a8e07897f342f19b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serverURL: wss://llapresi-socket.herokuapp.com
+  serverURL: ws://localhost:3000
   camera: {fileID: 534669904}
   users: []
   phoneCursorPrefab: {fileID: 1438801435348502, guid: d6f04f8ef0d31dd44a80f3038ae637b2,

@@ -34,7 +34,7 @@ public class PhoneCursor : MonoBehaviour {
         cursorPosition = newUICursor.GetComponent<RectTransform>();
         cursorPosition.localScale = Vector3.one;
         UnityEngine.UI.Image cursorImage = newUICursor.GetComponent<UnityEngine.UI.Image>();
-        cursorColor = cursorImage.color = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f, 1f, 1f);
+        cursorImage.color = cursorColor;
         offset = new Vector3(0.0f, 0.0f, 0.0f);
         RectTransform canvasSize = uiCanvas.GetComponent<RectTransform>();
         screenDimensions = new Vector2(canvasSize.rect.width, canvasSize.rect.height);
@@ -52,8 +52,6 @@ public class PhoneCursor : MonoBehaviour {
         {
             return;
         }
-        // Actually firing the rays right here is a horrible design but this is a one day proof of concept
-        // so yeah
 
         // Bit shift the index of the layer (9) to get a bit mask
         // Only casts on layer 9 (targets)
@@ -77,6 +75,17 @@ public class PhoneCursor : MonoBehaviour {
             targetWeHit.DoHit(this);
             webSocket.Send(JsonUtility.ToJson(msg));
         }
+    }
+
+    public void SetupCursorColor(WebSocket webSocket)
+    {
+        cursorColor = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f, 1f, 1f);
+
+        PlayerColorMessage msg = new PlayerColorMessage();
+        msg.userID = userID;
+        msg.type = "playerColor";
+        msg.hexColor = ColorUtility.ToHtmlStringRGB(cursorColor);
+        webSocket.Send(JsonUtility.ToJson(msg));
     }
 
     public void ConstantFire(WebSocket webSocket)

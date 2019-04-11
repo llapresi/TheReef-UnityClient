@@ -131,6 +131,7 @@ public class SocketTest : MonoBehaviour {
             PhoneCursor phoneComp = phoneCursor.GetComponent<PhoneCursor>();
             phoneComp.userID = queuedUsers.Dequeue();
             //Add user to list
+            phoneComp.SetupCursorColor(webSocket);
             users.Add(phoneComp);
         }
 

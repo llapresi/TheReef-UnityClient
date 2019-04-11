@@ -42,3 +42,11 @@ public class TargetInfoMessage
     public string targetDescription;
     public int userID;
 }
+
+[System.Serializable]
+public class PlayerColorMessage
+{
+    public string type = "playerColor";
+    public int userID;
+    public string hexColor;
+}
