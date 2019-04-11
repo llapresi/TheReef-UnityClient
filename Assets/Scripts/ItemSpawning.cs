@@ -6,7 +6,7 @@ public class ItemSpawning : MonoBehaviour {
 
     public GameObject bottlePrefab;
     //In the future we'll pick random prefabs of trash when we have more
-    //public GameObject[] trashPrefabs;
+    public GameObject[] trashPrefabs;
 
     public float spawnRate = 3.0f;
     public float fallSpeed = 0.5f;
@@ -44,8 +44,13 @@ public class ItemSpawning : MonoBehaviour {
         {
             for (int i = 0; i < spawnPoints.Length; i++)
             {
+                //Pick a random trash object to instantiate
+                GameObject tempObj = Instantiate(
+                    trashPrefabs[Random.Range(0, (trashPrefabs.Length))],
+                    new Vector3(0.0f, 0.0f, 0.0f),
+                    Quaternion.identity,
+                    spawnPoints[i]);
 
-                GameObject tempObj = Instantiate(bottlePrefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity, spawnPoints[i]);
                 //Get Parents location
                 Vector3 randomPosition = spawnPoints[i].position;
 
