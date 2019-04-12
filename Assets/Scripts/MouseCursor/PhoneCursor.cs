@@ -60,7 +60,7 @@ public class PhoneCursor : MonoBehaviour {
         RaycastHit hit;
         // Does the ray intersect any objects on layer 9
         var Ray = camera.ScreenPointToRay(cursorPosition.position);
-        if (Physics.Raycast(Ray, out hit, 100.0f, layerMask))
+        if (Physics.Raycast(Ray, out hit, 300.0f, layerMask))
         {
             // Get the target info component
             Debug.Log("Did Hit");
