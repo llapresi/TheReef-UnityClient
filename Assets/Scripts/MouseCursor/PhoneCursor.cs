@@ -15,17 +15,26 @@ public class PhoneCursor : MonoBehaviour {
     public Vector3 screenDimensions;
     private Color cursorColor;
 
+    // Storing our current and previous rotations for cursor interp
     Vector3 storedRotation;
+    Vector3 prevStoredRotation;
+    float currentCursorTime;
+    float prevCursorTime;
+    public bool useInterpolation = true;
 
     public void SetStoredRotation(Vector3 p_rotation)
     {
+        // reset our prev state
+        prevStoredRotation = storedRotation;
+        prevCursorTime = currentCursorTime;
         storedRotation.x = -p_rotation.x;
         storedRotation.y = -(p_rotation.z);
         storedRotation.z = -p_rotation.y;
+        currentCursorTime = Time.time;
     }
 
     // Use this for initialization
-    void Start () {
+    void Start() {
         camera = Camera.main;
         GameObject newUICursor = Instantiate(cursorPrefab);
         GameObject uiCanvas = GameObject.Find("Canvas");
@@ -39,9 +48,9 @@ public class PhoneCursor : MonoBehaviour {
         RectTransform canvasSize = uiCanvas.GetComponent<RectTransform>();
         screenDimensions = new Vector2(canvasSize.rect.width, canvasSize.rect.height);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update() {
         checkOffset();
     }
 
@@ -101,13 +110,13 @@ public class PhoneCursor : MonoBehaviour {
         {
             // Get the target info component
             Debug.Log("Did Hit");
-            
+
             //Starting GameObject now
             StartGame targetWeHit = hit.collider.gameObject.GetComponent<StartGame>();
             //Let the target know we hit it
             targetWeHit.isHovered = true;
             targetWeHit.changingColor = cursorColor;
-            
+
         }
     }
 
@@ -133,9 +142,19 @@ public class PhoneCursor : MonoBehaviour {
         float halfWidth = (screenDimensions.x) / 2;
         float halfHeight = (screenDimensions.y) / 2;
 
-        //Normal Movement
+        //Normal Movement w/ interp
         Vector3 aimForward = Quaternion.Euler(storedRotation) * Vector3.forward;
-        cursorPosition.anchoredPosition = new Vector3(aimForward.x * cursorSensitivity, aimForward.y * cursorSensitivity, 0);
+        Vector3 prevAimFoward = Quaternion.Euler(prevStoredRotation) * Vector3.forward;
+
+        Vector3 lerpAim = Vector3.LerpUnclamped(prevAimFoward, aimForward, CalculateInterpFactor());
+        if(useInterpolation)
+        {
+            cursorPosition.anchoredPosition = new Vector3(lerpAim.x * cursorSensitivity, lerpAim.y * cursorSensitivity, 0);
+        }
+        else
+        {
+            cursorPosition.anchoredPosition = new Vector3(aimForward.x * cursorSensitivity, aimForward.y * cursorSensitivity, 0);
+        }
 
         //Our cursors XY coords
         float tempX = cursorPosition.anchoredPosition.x;
@@ -162,6 +181,21 @@ public class PhoneCursor : MonoBehaviour {
             //Top Edge
             cursorPosition.anchoredPosition = new Vector3(tempX, (halfHeight), 0);
         }
-        
+
+    }
+
+    float CalculateInterpFactor()
+    {
+        float newerTime = currentCursorTime;
+        float olderTime = prevCursorTime;
+
+        if (newerTime != olderTime)
+        {
+            return (Time.time - newerTime) / (newerTime - olderTime);
+        }
+        else
+        {
+            return 1;
+        }
     }
 }
