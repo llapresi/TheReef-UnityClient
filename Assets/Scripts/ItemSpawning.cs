@@ -27,6 +27,9 @@ public class ItemSpawning : MonoBehaviour {
 
     public List<GameObject> trashItems;
 
+    // Should we be spawning trash right now
+    bool shouldSpawnTrash = false;
+
 	// Use this for initialization
 	void Start () {
         trashItems = new List<GameObject>();
@@ -111,11 +114,27 @@ public class ItemSpawning : MonoBehaviour {
     }//End Initialize Spawn Points
     void UpdateTiming()
     {
-        timeSinceLastSpawn += Time.deltaTime;
-        if (timeSinceLastSpawn >= spawnRate)
+        if(shouldSpawnTrash)
         {
-            SpawnTrash();
-            timeSinceLastSpawn = 0.0f;
+            timeSinceLastSpawn += Time.deltaTime;
+            if (timeSinceLastSpawn >= spawnRate)
+            {
+                SpawnTrash();
+                timeSinceLastSpawn = 0.0f;
+            }
         }
+    }
+
+    public void ResetTrash()
+    {
+        totalTrashMade = 0;
+        totalTrashCollected = 0;
+        timeSinceLastSpawn = 0.0f;
+        shouldSpawnTrash = true;
+    }
+
+    public void StopSpawningTrash()
+    {
+        shouldSpawnTrash = false;
     }
 }

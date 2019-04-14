@@ -16,20 +16,20 @@ public class PhoneCursor : MonoBehaviour {
     private Color cursorColor;
 
     // Storing our current and previous rotations for cursor interp
-    Vector3 storedRotation;
-    Vector3 prevStoredRotation;
+    Vector2 storedRotation;
+    Vector2 prevStoredRotation;
     float currentCursorTime;
     float prevCursorTime;
     public bool useInterpolation = true;
 
-    public void SetStoredRotation(Vector3 p_rotation)
+    public void SetStoredRotation(Vector2 p_rotation)
     {
         // reset our prev state
         prevStoredRotation = storedRotation;
         prevCursorTime = currentCursorTime;
+        // set our new rotation
         storedRotation.x = -p_rotation.x;
-        storedRotation.y = -(p_rotation.z);
-        storedRotation.z = -p_rotation.y;
+        storedRotation.y = -(p_rotation.y);
         currentCursorTime = Time.time;
     }
 
@@ -147,6 +147,8 @@ public class PhoneCursor : MonoBehaviour {
         Vector3 prevAimFoward = Quaternion.Euler(prevStoredRotation) * Vector3.forward;
 
         Vector3 lerpAim = Vector3.LerpUnclamped(prevAimFoward, aimForward, CalculateInterpFactor());
+
+        // Use interpolated aim if bool is set to true, otherwise just use our current aim
         if(useInterpolation)
         {
             cursorPosition.anchoredPosition = new Vector3(lerpAim.x * cursorSensitivity, lerpAim.y * cursorSensitivity, 0);

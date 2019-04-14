@@ -20,10 +20,10 @@ public class StoredPlayerFire
 
 public class StoredCursorMove
 {
-    public Vector3 storedRotation;
+    public Vector2 storedRotation;
     public int userID;
 
-    public StoredCursorMove(Vector3 p_storedRotation, int p_id)
+    public StoredCursorMove(Vector2 p_storedRotation, int p_id)
     {
         storedRotation = p_storedRotation;
         userID = p_id;
@@ -177,7 +177,7 @@ public class SocketTest : MonoBehaviour {
         {
             case "rotate":
                 RotationMessage rotMsg = JsonUtility.FromJson<RotationMessage>(e.Data);
-                Vector3 ourVector = new Vector3(rotMsg.x, rotMsg.y, rotMsg.z);
+                Vector2 ourVector = new Vector2(rotMsg.x, rotMsg.z);
                 queuedCursorMoves.Enqueue(new StoredCursorMove(ourVector, rotMsg.id));
                 break;
             case "fire":
