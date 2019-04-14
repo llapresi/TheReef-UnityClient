@@ -63,4 +63,9 @@ public class TimeManager : MonoBehaviour {
         timerRunning = false;
         timerText.text = "";
     }
+
+    public bool IsTimerRunning()
+    {
+        return timerRunning;
+    }
 }

@@ -9,9 +9,18 @@ public class LoadIntro : MonoBehaviour {
     public ItemSpawning items;
     public CoralManaging coral;
 
+    public bool skipIntro = false;
+
     // Use this for initialization
     void Start () {
-        BeginIntro();
+        if (!skipIntro)
+        {
+            BeginIntro();
+        }
+        else
+        {
+            BeginGame();
+        }
     }
 	
 	public void BeginGame()

@@ -167,6 +167,8 @@ public class UIEndingManagerScript : MonoBehaviour {
                 }
             }
         }
+
+    
         
         
     }//End Manage Transitions

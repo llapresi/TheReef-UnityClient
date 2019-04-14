@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.PostProcessing;
 
 public class UIManagerScript : MonoBehaviour {
 
     private float totalTime;
     private List<UITransition> uiTransitions;
-    private bool shouldKillReef;
 
-    
+    private bool shouldKillReef;
+    private PostProcessVolume postProcessorScript;
+
+
     public Text introText;    //Welcome To
     public Text introTextTwo; //The Reef
     public Text descText;     //11.1 billion
@@ -140,6 +143,9 @@ public class UIManagerScript : MonoBehaviour {
         // Grab out LoadIntro component from the main scene
         parentSceneLoader = GameObject.Find("SceneManager").GetComponent<LoadIntro>();
 
+        postProcessorScript = parentSceneLoader.coral.postProcessorScript;
+        shouldKillReef = true;
+
         totalTime = 0.0f;
         uiTransitions = new List<UITransition>();
 
@@ -184,6 +190,8 @@ public class UIManagerScript : MonoBehaviour {
                 }
             }
         }
+
+        KillReef();
         
         
     }//End Manage Transitions
@@ -215,10 +223,21 @@ public class UIManagerScript : MonoBehaviour {
     //Run this once in the beginning to kill the reef at a certain time slot
     void KillReef()
     {
-        if (shouldKillReef)
+        if (shouldKillReef && totalTime >= 31.0f)
         {
-
+            StartCoroutine(IncrementWeightValue(0.0f, 1.0f));
             shouldKillReef = false;
+        }
+    }
+
+    //Decrement from the start to the end point over time
+    //Gradually change the post processing weight
+    IEnumerator IncrementWeightValue(float start, float end)
+    {
+        for (float f = start; f < end; f += 0.01f)
+        {
+            postProcessorScript.weight = f;
+            yield return null;
         }
     }
 }

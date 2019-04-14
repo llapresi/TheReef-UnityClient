@@ -11,7 +11,10 @@ public class CoralManaging : MonoBehaviour {
     private float percentageCollected;
 
     public GameObject postProcessor;
-    private PostProcessVolume postProcessorScript;
+    public PostProcessVolume postProcessorScript;
+
+    public GameObject timeObject;
+    private TimeManager timeManagerScript;
 
     private ReefWeight[] reefWeightTransitions;
 
@@ -43,6 +46,7 @@ public class CoralManaging : MonoBehaviour {
         trashToBeMade = itemManagerScript.trashToSpawn;
 
         postProcessorScript = postProcessor.GetComponent<PostProcessVolume>();
+        timeManagerScript = timeObject.GetComponent<TimeManager>();
 
         reefWeightTransitions = new ReefWeight[10];
         PopulateReefWeight();
@@ -61,6 +65,12 @@ public class CoralManaging : MonoBehaviour {
         //Theres a more efficient way to set this up. Will wait to see how we're managing our objects before
         //We implment the class that holds the corals and weight values for post processing
         //for now, this poopoo will suffice
+
+        //Boot us out if we havent started the timer yet. This holds off on the post processing weight adjustments during onboarding
+        if (!timeManagerScript.IsTimerRunning())
+        {
+            return;
+        }
 
 
         if (percentageCollected >= 0.975f)
