@@ -8,6 +8,7 @@ public class UIManagerScript : MonoBehaviour {
 
     private float totalTime;
     private List<UITransition> uiTransitions;
+    private bool shouldKillReef;
 
     
     public Text introText;    //Welcome To
@@ -148,6 +149,7 @@ public class UIManagerScript : MonoBehaviour {
         uiTransitions.Add(new TextTransition(descText, 7.0f, 11.0f));
         uiTransitions.Add(new TextTransition(descTextTwo, 12.0f, 16.0f));
         uiTransitions.Add(new TextTransition(prompt, 17.0f, 22.0f));
+        //Final prompt happens at 31 seconds. Lets start off with the reef all pretty, then kill it.
         uiTransitions.Add(new TextTransition(final, 31.0f, 35.0f));
 
         //uiTransitions.Add(new ImageTransition(bottle, 23.0f, 30.0f));
@@ -207,6 +209,16 @@ public class UIManagerScript : MonoBehaviour {
         {
             // Do stuff after scene loads here
             yield return null;
+        }
+    }
+
+    //Run this once in the beginning to kill the reef at a certain time slot
+    void KillReef()
+    {
+        if (shouldKillReef)
+        {
+
+            shouldKillReef = false;
         }
     }
 }

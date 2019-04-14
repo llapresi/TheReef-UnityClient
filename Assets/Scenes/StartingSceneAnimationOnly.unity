@@ -647,7 +647,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Let's begin the journey. Time is running out so act fast
+  m_Text: Time is running out, so act fast
 --- !u!222 &892701400
 CanvasRenderer:
   m_ObjectHideFlags: 0

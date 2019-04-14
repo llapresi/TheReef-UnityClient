@@ -7,6 +7,7 @@ public class LoadIntro : MonoBehaviour {
 
     public TimeManager timer;
     public ItemSpawning items;
+    public CoralManaging coral;
 
     // Use this for initialization
     void Start () {

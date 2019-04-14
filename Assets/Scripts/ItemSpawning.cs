@@ -13,7 +13,7 @@ public class ItemSpawning : MonoBehaviour {
     private float timeSinceLastSpawn = 0.0f;
 
     public int totalTrashMade = 0;
-    public int trashToSpawn = 100;
+    public int trashToSpawn = 108;
     public int totalTrashCollected = 0;
 
     //Dimensions of screen space
