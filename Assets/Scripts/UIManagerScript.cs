@@ -21,6 +21,10 @@ public class UIManagerScript : MonoBehaviour {
     public Text prompt;       //Collect plastic
     public Text final;        //Journey
 
+    public Text bottleText;
+    public Text bubbleText;
+    public Text phoneText;
+
     //public Image bottle;
     public UIBubbleImage bottle;
     public UIBubbleImage bubble;
@@ -159,6 +163,11 @@ public class UIManagerScript : MonoBehaviour {
         uiTransitions.Add(new TextTransition(final, 31.0f, 35.0f));
 
         //uiTransitions.Add(new ImageTransition(bottle, 23.0f, 30.0f));
+
+        uiTransitions.Add(new TextTransition(bottleText, 23.0f, 25.0f));
+        uiTransitions.Add(new TextTransition(bubbleText, 25.0f, 27.0f));
+        uiTransitions.Add(new TextTransition(phoneText, 27.0f, 29.0f));
+
         uiTransitions.Add(new BubbleGroupTransition(bottle, 23.0f, 30.0f));
         uiTransitions.Add(new BubbleGroupTransition(bubble, 25.0f, 30.0f));
         uiTransitions.Add(new BubbleGroupTransition(phone, 27.0f, 30.0f));
