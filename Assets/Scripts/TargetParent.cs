@@ -75,7 +75,7 @@ public class TargetParent : MonoBehaviour {
     public void DoHit(PhoneCursor p_userID)
     {
         heldBy = p_userID;
-        StartCoroutine(ChangeColor());
+        //StartCoroutine(ChangeColor());
     }
 
     public void DoYeet()

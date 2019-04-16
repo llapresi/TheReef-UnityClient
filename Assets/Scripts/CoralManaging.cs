@@ -72,6 +72,8 @@ public class CoralManaging : MonoBehaviour {
             return;
         }
 
+        //Debug.Log("Percentage: " + percentageCollected);
+        //Debug.Log("Weight: " + postProcessorScript.weight);
 
         if (percentageCollected >= 0.975f)
         {

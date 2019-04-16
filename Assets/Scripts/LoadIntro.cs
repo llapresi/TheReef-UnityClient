@@ -38,6 +38,7 @@ public class LoadIntro : MonoBehaviour {
 
     public void BeginIntro()
     {
+        StartCoroutine(UnloadScene(2));
         StartCoroutine(LoadScene("StartingSceneAnimationOnly"));
     }
 
@@ -52,5 +53,22 @@ public class LoadIntro : MonoBehaviour {
             // Do stuff after scene loads here
             yield return null;
         }
+    }
+
+    IEnumerator UnloadScene(int index)
+    {
+
+        if(SceneManager.GetSceneByBuildIndex(index).isLoaded)
+        {
+            AsyncOperation asyncuUnload = SceneManager.UnloadSceneAsync(index);
+
+            // Wait until the asynchronous scene fully loads
+            while (!asyncuUnload.isDone)
+            {
+                // Do stuff after scene loads here
+                yield return null;
+            }
+        }
+
     }
 }

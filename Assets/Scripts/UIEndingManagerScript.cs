@@ -180,20 +180,7 @@ public class UIEndingManagerScript : MonoBehaviour {
             if (parentSceneLoader != null)
             {
                 parentSceneLoader.BeginIntro();
-                StartCoroutine(UnloadIntro());
             }
-        }
-    }
-
-    IEnumerator UnloadIntro()
-    {
-        AsyncOperation asyncLoad = SceneManager.UnloadSceneAsync("EndingScene");
-
-        // Wait until the asynchronous scene fully loads
-        while (!asyncLoad.isDone)
-        {
-            // Do stuff after scene loads here
-            yield return null;
         }
     }
 }

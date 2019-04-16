@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour {
 
-    bool timerRunning;
+    public bool timerRunning;
     public Text timerText;
 
     public float time = 60; //default 90 seconds for now
