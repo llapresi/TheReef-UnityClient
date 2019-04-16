@@ -7,6 +7,7 @@ public class TimeManager : MonoBehaviour {
 
     public bool timerRunning;
     public Text timerText;
+    public Slider progressBar;
 
     public float time = 60; //default 90 seconds for now
     float startingTime;
@@ -19,6 +20,7 @@ public class TimeManager : MonoBehaviour {
         gameManager = GameObject.Find("SceneManager").GetComponent<LoadIntro>();
         startingTime = time;
         timerRunning = false;
+        progressBar.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
     }
 
     // Update is called once per frame
@@ -47,13 +49,23 @@ public class TimeManager : MonoBehaviour {
             {
                 EndTimer();
             }
+
+            UpdateProgressBar();
         }
+    }
+
+    public void UpdateProgressBar()
+    {
+        //Turn our time to a %
+        float progress = progress = (1 - (time / startingTime));
+        progressBar.value = (progress);
     }
 
     public void StartTimer()
     {
         time = startingTime;
         timerRunning = true;
+        progressBar.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
     }
 
     void EndTimer()
@@ -62,6 +74,8 @@ public class TimeManager : MonoBehaviour {
         gameManager.EndGame();
         timerRunning = false;
         timerText.text = "";
+        //hide progress bar
+        progressBar.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
     }
 
     public bool IsTimerRunning()
