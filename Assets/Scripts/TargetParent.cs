@@ -120,7 +120,6 @@ public class TargetParent : MonoBehaviour {
         {
             DestroyItem();
         }
-        Debug.Log(Time.deltaTime);
     }
 
     public void DestroyItem()
