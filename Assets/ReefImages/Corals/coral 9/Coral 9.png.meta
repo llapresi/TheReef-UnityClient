@@ -1,0 +1,3869 @@
+fileFormatVersion: 2
+guid: 27add9dffefae594aae4167762419ca7
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Coral 9 2_0
+    21300002: Coral 9 2_1
+    21300004: Coral 9 2_2
+    21300006: Coral 9 2_3
+    21300008: Coral 9 2_4
+    21300010: Coral 9 2_5
+    21300012: Coral 9 2_6
+    21300014: Coral 9 2_7
+    21300016: Coral 9 2_8
+    21300018: Coral 9 2_9
+    21300020: Coral 9 2_10
+    21300022: Coral 9 2_11
+    21300024: Coral 9 2_12
+    21300026: Coral 9 2_13
+    21300028: Coral 9 2_14
+    21300030: Coral 9 2_15
+    21300032: Coral 9 2_16
+    21300034: Coral 9 2_17
+    21300036: Coral 9 2_18
+    21300038: Coral 9 2_19
+    21300040: Coral 9 2_20
+    21300042: Coral 9 2_21
+    21300044: Coral 9 2_22
+    21300046: Coral 9 2_23
+    21300048: Coral 9 2_24
+    21300050: Coral 9 2_25
+    21300052: Coral 9 2_26
+    21300054: Coral 9 2_27
+    21300056: Coral 9 2_28
+    21300058: Coral 9 2_29
+    21300060: Coral 9 2_30
+    21300062: Coral 9 2_31
+    21300064: Coral 9 2_32
+    21300066: Coral 9 2_33
+    21300068: Coral 9 2_34
+    21300070: Coral 9 2_35
+    21300072: Coral 9 2_36
+    21300074: Coral 9 2_37
+    21300076: Coral 9 2_38
+    21300078: Coral 9 2_39
+    21300080: Coral 9 2_40
+    21300082: Coral 9 2_41
+    21300084: Coral 9 2_42
+    21300086: Coral 9 2_43
+    21300088: Coral 9 2_44
+    21300090: Coral 9 2_45
+    21300092: Coral 9 2_46
+    21300094: Coral 9 2_47
+    21300096: Coral 9 2_48
+    21300098: Coral 9 2_49
+    21300100: Coral 9 2_50
+    21300102: Coral 9 2_51
+    21300104: Coral 9 2_52
+    21300106: Coral 9 2_53
+    21300108: Coral 9 2_54
+    21300110: Coral 9 2_55
+    21300112: Coral 9 2_56
+    21300114: Coral 9 2_57
+    21300116: Coral 9 2_58
+    21300118: Coral 9 2_59
+    21300120: Coral 9 2_60
+    21300122: Coral 9 2_61
+    21300124: Coral 9 2_62
+    21300126: Coral 9 2_63
+    21300128: Coral 9 2_64
+    21300130: Coral 9 2_65
+    21300132: Coral 9 2_66
+    21300134: Coral 9 2_67
+    21300136: Coral 9 2_68
+    21300138: Coral 9 2_69
+    21300140: Coral 9 2_70
+    21300142: Coral 9 2_71
+    21300144: Coral 9 2_72
+    21300146: Coral 9 2_73
+    21300148: Coral 9 2_74
+    21300150: Coral 9 2_75
+    21300152: Coral 9 2_76
+    21300154: Coral 9 2_77
+    21300156: Coral 9 2_78
+    21300158: Coral 9 2_79
+    21300160: Coral 9 2_80
+    21300162: Coral 9 2_81
+    21300164: Coral 9 2_82
+    21300166: Coral 9 2_83
+    21300168: Coral 9 2_84
+    21300170: Coral 9 2_85
+    21300172: Coral 9 2_86
+    21300174: Coral 9 2_87
+    21300176: Coral 9 2_88
+    21300178: Coral 9 2_89
+    21300180: Coral 9 2_90
+    21300182: Coral 9 2_91
+    21300184: Coral 9 2_92
+    21300186: Coral 9 2_93
+    21300188: Coral 9 2_94
+    21300190: Coral 9 2_95
+    21300192: Coral 9 2_96
+    21300194: Coral 9 2_97
+    21300196: Coral 9 2_98
+    21300198: Coral 9 2_99
+    21300200: Coral 9 2_100
+    21300202: Coral 9 2_101
+    21300204: Coral 9 2_102
+    21300206: Coral 9 2_103
+    21300208: Coral 9 2_104
+    21300210: Coral 9 2_105
+    21300212: Coral 9 2_106
+    21300214: Coral 9 2_107
+    21300216: Coral 9 2_108
+    21300218: Coral 9 2_109
+    21300220: Coral 9 2_110
+    21300222: Coral 9 2_111
+    21300224: Coral 9 2_112
+    21300226: Coral 9 2_113
+    21300228: Coral 9 2_114
+    21300230: Coral 9 2_115
+    21300232: Coral 9 2_116
+    21300234: Coral 9 2_117
+    21300236: Coral 9 2_118
+    21300238: Coral 9 2_119
+    21300240: Coral 9 2_120
+    21300242: Coral 9 2_121
+    21300244: Coral 9 2_122
+    21300246: Coral 9 2_123
+    21300248: Coral 9 2_124
+    21300250: Coral 9 2_125
+    21300252: Coral 9 2_126
+    21300254: Coral 9 2_127
+    21300256: Coral 9 2_128
+    21300258: Coral 9 2_129
+    21300260: Coral 9 2_130
+    21300262: Coral 9 2_131
+    21300264: Coral 9 2_132
+    21300266: Coral 9 2_133
+    21300268: Coral 9 2_134
+    21300270: Coral 9 2_135
+    21300272: Coral 9 2_136
+    21300274: Coral 9 2_137
+    21300276: Coral 9 2_138
+    21300278: Coral 9 2_139
+    21300280: Coral 9 2_140
+    21300282: Coral 9 2_141
+    21300284: Coral 9 2_142
+    21300286: Coral 9 2_143
+    21300288: Coral 9 2_144
+    21300290: Coral 9 2_145
+    21300292: Coral 9 2_146
+    21300294: Coral 9 2_147
+    21300296: Coral 9 2_148
+    21300298: Coral 9 2_149
+    21300300: Coral 9 2_150
+    21300302: Coral 9 2_151
+    21300304: Coral 9 2_152
+    21300306: Coral 9 2_153
+    21300308: Coral 9 2_154
+    21300310: Coral 9 2_155
+    21300312: Coral 9 2_156
+    21300314: Coral 9 2_157
+    21300316: Coral 9 2_158
+    21300318: Coral 9 2_159
+    21300320: Coral 9 2_160
+    21300322: Coral 9 2_161
+    21300324: Coral 9 2_162
+    21300326: Coral 9 2_163
+    21300328: Coral 9 2_164
+    21300330: Coral 9 2_165
+    21300332: Coral 9 2_166
+    21300334: Coral 9 2_167
+    21300336: Coral 9 2_168
+    21300338: Coral 9 2_169
+    21300340: Coral 9 2_170
+    21300342: Coral 9 2_171
+    21300344: Coral 9 2_172
+    21300346: Coral 9 2_173
+    21300348: Coral 9 2_174
+    21300350: Coral 9 2_175
+    21300352: Coral 9 2_176
+    21300354: Coral 9 2_177
+    21300356: Coral 9 2_178
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Coral 9 2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1870
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1001763b683355749a0c6f67aa0cdc64
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1870
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e989138c250074041b803c217333efec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_2
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1870
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb21878dcc5d81418803eab0ee3212f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_3
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1870
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d7d949a2a7e284c8d54e7bcfbbd0b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_4
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1870
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094137957308a414cb0dd312080cfcec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_5
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1870
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4b4fa7fb5b6474c83318125b414664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_6
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1870
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ba61e3f6110794796717a7341dc9e4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_7
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1870
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f06c77f1520da44a95154c581626c2a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_8
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1870
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4bc5fe2bd3d04d469d51b227e1367c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_9
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1870
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02aa1f4511ac33a4ca5e1729a3711df6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1760
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec582726daf24f943addf05f55ec197e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_11
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1760
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86df36278fe0a4c4897e21e3946134ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_12
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1760
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f94be20c7aeac42ae52ff9a0863ace
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_13
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1760
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d535de6cee05e7540827fced9ac2ed6c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_14
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1760
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ade4ebadec00a4d8e9512c38add4e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_15
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1760
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0428f7df44d7b4542b3e6145dbb0b128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_16
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1760
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dbb27168d54abe47b8a4961d6cc8f78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_17
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1760
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d5126d9f0147f4a94dd9c48cd2583a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_18
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1760
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f96afcd6932724f90b57bf3db781cd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_19
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1760
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68fceeefd6e4104eb1f72ed8430c0e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1650
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71f906379d600b41bcfaffddca894b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_21
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1650
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35281f6ca812e704482493dab34f8634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_22
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1650
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d5d4c873a023d42bc74b24ba21d29f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_23
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1650
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50618cec1bf1d7439714b1ce5448f5a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_24
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1650
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 589967d8d096ef840b20206af92c75a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_25
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1650
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ae586b1d79ef1469de45c6c46e4e44
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_26
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1650
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba42b56985b4b3748bd50a0a307eb77d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_27
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1650
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ccebf0b7986574ebfbb107f1fadd1b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_28
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1650
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7ea3c6c27da6f4f8142622ad1d5a63
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_29
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1650
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa7df608fc13944a973c97cdf6fabf7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1540
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c362c81571ab783499006d488e80d1d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_31
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1540
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5010d89d47e3c704eaf11039ae92db7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_32
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1540
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e48aac9b4b157940bcbb5bc40205de1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_33
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1540
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc236addee2f310479312702cf5e823c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_34
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1540
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17d92bc2eaf5c64cbd0dba1719a737c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_35
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1540
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5bb6538cb1e764b8d4172c66f1737a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_36
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1540
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8aa03562e396ce4bbe44d8f63f8339d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_37
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1540
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060af34270c7fd244a360aab6deaf65b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_38
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1540
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f2d1bfe04737b45b0d0c96b6899554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_39
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1540
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b381a8059d2f2874d9a15a07fecc6fa4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1430
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a23dfbab0cd9ed419bcc0d308a69b71
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_41
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1430
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c72d963f2354944aae736c595c3e30
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_42
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1430
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3070375b27e6cd241b975cf32a69e8d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_43
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1430
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3fcb7a4b04d8e44a5045c4d3f59f13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_44
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1430
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1fded4a68405e74b8b2e2e537004740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_45
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1430
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97f69083c070af4db5a35a652668b7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_46
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1430
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8456623d7c92c4c46bff6ad7d74c2c87
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_47
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1430
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703a3759dc1eaae44bdf35bb639e4412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_48
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1430
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5073363f2206b543bd15103a54eac62
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_49
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1430
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3031d191cd214ac48a8ee4f87603072e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1320
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ded74f012cf10c41a2af79770a6ef83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_51
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1320
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f57b3dca1584b54183b1c058b29fe9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_52
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1320
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e5c560f22a28f41bef630745a43ea3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_53
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1320
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baad8513ee124b2468cf9ca7cb1d6dc8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_54
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1320
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0267d0b2896042d4b9939f6e59771f91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_55
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1320
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f053f6e1cfbf6944f99abd73b6bf912f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_56
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1320
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84e77ad1eba07c41b65c3939960fa22
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_57
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1320
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5ee968b90a3a640b40099a4adb5dc1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_58
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1320
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470db77b7e1541c42938982870e08944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_59
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1320
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11dea7770af14964c9a51ff5bdbe4bb0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1210
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f90f65cd3516fd84b917b1e5c50cc04c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_61
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1210
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660999bca169c274aaffdfb62c0f52eb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_62
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1210
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff217b8273a94f459b1d0e23704611f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_63
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1210
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ede55aa69a2b1f48ac078fcd9ad8d0e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_64
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1210
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce07f40da3e56324fb3a35738215a44a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_65
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1210
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866be43c3868aa94787489eed851bbf2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_66
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1210
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecc4118dc793027409fccc93b3568035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_67
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1210
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd8ffe68d0369a4b8e3da8e5c324acd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_68
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1210
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a02702733eecd44a9ce20e97beaa2db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_69
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1210
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898397963cf998e4290913a96ded0710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1100
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3760261b1bfd54b89708ca5868a6cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_71
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1100
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f48bddf83606a774e9ee828077d1da37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_72
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1100
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb8cb0a3825e054287a2998a035ef1d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_73
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1100
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2446797058ea7e478acb79b4d21f4db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_74
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1100
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 312cd383cf5fc6d4aa35d0f1d7663e50
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_75
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1100
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b83fce4395397c458c1dfda7ad88e46
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_76
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1100
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def2f916ec194f64486868022336bac5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_77
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1100
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3e2ccb84485a349b18869768329c57
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_78
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1100
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fba96e48a9f30d4a8161faed02ae419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_79
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1100
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25320a0f132a9ce44b365f6aa37d84d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 990
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37552bc625c865f4e92ddaa2ecb0cde1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_81
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 990
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f073fe66c52dfc43856a645d03bb3f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_82
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 990
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ece6fd8eaa7cf4995858cfb1b49703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_83
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 990
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b885040f23f75e24e8e1dea28f1f9b5f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_84
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 990
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a24e3a9ef7ccb2542a5a0d1bb7af4ec8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_85
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 990
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405c9340e4991964d9fa70aee3023e21
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_86
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 990
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4aa31778f8eee4db109049ea720b31
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_87
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 990
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258f1b3260d4d4947af613cea586eae3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_88
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 990
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ecc640360f3a1a408d72126c4727352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_89
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 990
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529706c47216ff54faea89f212728a52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 880
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f8b3346c8473b48a928e0eeed2fbb5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_91
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 880
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd910eb41e8e42844a5b3252ae36329c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_92
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 880
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc27c2972dcde8845a4590c272a5bf33
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_93
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 880
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d4d86d6e7f42a642b819f8d24df78aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_94
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 880
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dee9b410368f6c448c41e85fddd8b64
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_95
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 880
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631a09f1529b56349b95f1e267f0e8f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_96
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 880
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11904db09eb25de45bdfb2ae3cf1c2f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_97
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 880
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9e2617ed06552428b398b87332eda1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_98
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 880
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96dedeee295f9694192d0c2741cfdf56
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_99
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 880
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de33ef88ca94a7418056190c3caf0b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 770
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7dc58bbed638d42ab08640ce195c76
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_101
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 770
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d7ca3750f558248909e8adfcbbcd03
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_102
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 770
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b15aa13762f9b4fa56e3164b52a955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_103
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 770
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb74f0423904a1242aaefff6ffef55b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_104
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 770
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a32b9f4e791ee2409199fd6bf4d983e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_105
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 770
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac7b3b3c4606ba84180647243d53b481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_106
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 770
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: effca05e5b3cd3147b9103f42c09e146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_107
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 770
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224dc9bb2b0c86d4cb6ecc4423a96661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_108
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 770
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b52f158bcc3f44187b236047fdc955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_109
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 770
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167a2ec4d098ca441a36592fa1a6d386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 660
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be8dccb4819bc244394f780575b1c2d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_111
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 660
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c401e83d7bd8ef94890374534ca64f85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_112
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 660
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b6a6f2366e29a547a2f789e0b2ee578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_113
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 660
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3a9409d24a0db0499cae8e6ddc0357d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_114
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 660
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cef695693a31ca4996f39fb14b1a92d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_115
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 660
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b3615b38408c645976ef08b05f9e76
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_116
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 660
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 745dcb42d3223dc4fbabcbb16d74b728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_117
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 660
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f890a67de732c49a42e346edd31176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_118
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 660
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e852ead70f10874cab00ec182ca1c4e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_119
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 660
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031ebfdc05c490b48a2873049660b239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 550
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a21c7b400f04341a2c0197e209adca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_121
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 550
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8d579406f748d48aafba79d54027cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_122
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 550
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfcb5ac09f4e41644b27ef1ecd2dbd3e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_123
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 550
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3740438edb78f594b9bf7d8245444698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_124
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 550
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa9c87d40a56e348a4a25d50d9c4ff9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_125
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 550
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97b34a587c35b44db2fba1ac8b431d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_126
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 550
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6f0d83d94cddb4e8109d257343e610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_127
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 550
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6985f3f51e8c7459e9277ab86e0bf5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_128
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 550
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a996328d20ae7469132d3089b8233d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_129
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 550
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0008cbf39e53d2845ae5ffb3588bdc47
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 440
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae2aa92a83252d4c8e2166523ff1bd2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_131
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 440
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 858ea2b3b3def0446bd6d9cab51c9dbb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_132
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 440
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ac289762a89594aacb9560c63d9f45
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_133
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 440
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed10501a2774d84fa812efde66b8dd8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_134
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 440
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01b2ad60406ad646bfc06f44b26c7d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_135
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 440
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15e841bcdac3ed4185872182aa78653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_136
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 440
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18a19c90fa35754a89ec08e2f555891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_137
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 440
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ec221c8dfec964dac74e39662cb00a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_138
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 440
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7183b233f72e8845aa7916cce137cd1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_139
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 440
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2eaabddb57e7e41880ac9634e5f993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 330
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4b8a4264c4f134ca5a2ad8a21ea120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_141
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 330
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c96fa00de1d354eaae3f81b635f47c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_142
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 330
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ee5714d4d28ce40a93fa8655749fba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_143
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 330
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6b6f0f10f030449956e3bae938d4f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_144
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 330
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0049c4c6a3887574ba01a4c297824a87
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_145
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 330
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059b3a86b39d7d74f8d5efadf78dadea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_146
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 330
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d749d1ad1e565e46ba32692ebba84fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_147
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 330
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8519875c11779d2438c1eef882d544e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_148
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 330
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145645d998bda2349a4cd551a20172ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_149
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 330
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5f36567ee103043b3c56ca00dfc6bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_150
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 220
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c05309beeb88264c8e28dae331d761c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_151
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 220
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d6f60c911af7544bf40f3647ff5784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_152
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 220
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f9ee97a1be511459183ef75466aa90
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_153
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 220
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a79ce3fdf92ed614c936636a55f82a34
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_154
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 220
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30708a3d50abc234e9562da16b63e825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_155
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 220
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201d241a49b70f54f847b70151e04d79
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_156
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 220
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60205bbceb594944b8b4e2806532abb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_157
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 220
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67d3ca2313a71f4ca7b6540b4a55610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_158
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 220
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243cfad6c7a64f44cbaa3692aaaa8c42
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_159
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 220
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694af2c5544742e4c96789fbe6600dd5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 110
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc92c3b5b7d0324438bdf5d5ac11eec9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_161
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 110
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4499eebb66bc1b24ea6bef25fb92cefc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_162
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 110
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed67bbe7896b6f94e902e7838a28bc6c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_163
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 110
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5b2eeb19f54ac4a8958d90a56e41fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_164
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 110
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b65b64d85df0504382fdee4dac33696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_165
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 110
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bf408ec3d703849a0454cc7ecb3601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_166
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 110
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b09b3b483cef341a0709131a3a643f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_167
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 110
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e8f3b72a7a1dc49bc1bdf4e0fb441a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_168
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 110
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e67b2996a140047a0234ed15ce2a15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_169
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 110
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8234b18390b096344a5f72eeca5b991f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_170
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135496fc77acec04897a30082a78b754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_171
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59362e7f81e2ad64aa8394cbae698799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_172
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 0
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e32cb8e8c3df4c40bb6ec2a25cfac5b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_173
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83183abf195a2354f8c890a5b23a125e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_174
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 0
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0da9a00055d6b94094bac04cfaa53a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_175
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 0
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b36ed146a260c4d97e302135f25aba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_176
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 0
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9edd2f464f80804cb0723605db31c29
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_177
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 0
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6280c4b885453c45a11e7e9198c8dd2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coral 9 2_178
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 0
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.77, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3ec45bc1779dc4fb005c5fceafe68a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 8a76299f35a78db43a30bdd4c984a100
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ItemSpawning : MonoBehaviour {
 
-    public GameObject bottlePrefab;
     //In the future we'll pick random prefabs of trash when we have more
     public GameObject[] trashPrefabs;
 

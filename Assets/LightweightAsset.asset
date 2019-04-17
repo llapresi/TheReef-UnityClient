@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: LightweightAsset
   m_EditorClassIdentifier: 
   k_AssetVersion: 3
-  m_MaxPixelLights: 2
+  m_MaxPixelLights: 3
   m_SupportsVertexLight: 0
   m_RequireDepthTexture: 0
   m_RequireSoftParticles: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
   m_Cascade4Split: {x: 0.44902244, y: 0.5146066, z: 0.81210434}
   m_LocalShadowsSupported: 0
   m_LocalShadowsAtlasResolution: 512
-  m_SoftShadowsSupported: 0
+  m_SoftShadowsSupported: 1
   m_KeepAdditionalLightVariants: 1
   m_KeepVertexLightVariants: 1
   m_KeepDirectionalShadowVariants: 1
