@@ -12,54 +12,7 @@ MonoBehaviour:
   m_Name: DeadReef
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: 114256874199587418}
   - {fileID: 114315886189801866}
---- !u!114 &114256874199587418
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
-  m_Name: Bloom
-  m_EditorClassIdentifier: 
-  active: 1
-  enabled:
-    overrideState: 1
-    value: 1
-  intensity:
-    overrideState: 0
-    value: 20.2
-  threshold:
-    overrideState: 0
-    value: 1.03
-  softKnee:
-    overrideState: 0
-    value: 0.5
-  clamp:
-    overrideState: 0
-    value: 65472
-  diffusion:
-    overrideState: 0
-    value: 6
-  anamorphicRatio:
-    overrideState: 0
-    value: 0
-  color:
-    overrideState: 1
-    value: {r: 0.9162612, g: 1.0717734, b: 0.28160322, a: 1}
-  fastMode:
-    overrideState: 0
-    value: 0
-  dirtTexture:
-    overrideState: 0
-    value: {fileID: 0}
-    defaultState: 1
-  dirtIntensity:
-    overrideState: 0
-    value: 0
 --- !u!114 &114315886189801866
 MonoBehaviour:
   m_ObjectHideFlags: 3
