@@ -10,6 +10,7 @@ public class LoadIntro : MonoBehaviour {
     public CoralManaging coral;
 
     public bool skipIntro = false;
+    bool isFullscreen = false;
 
     // Use this for initialization
     void Start () {
@@ -22,8 +23,27 @@ public class LoadIntro : MonoBehaviour {
             BeginGame();
         }
     }
-	
-	public void BeginGame()
+
+    private void Update()
+    {
+        // Check if F key is pressed to go into Fullscreen
+        // Make sure Nvidia Surround is setup so that Unity recognizes the two projectors as one monitor
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            if (!isFullscreen)
+            {
+                Screen.SetResolution(3840, 1080, true);
+                isFullscreen = true;
+            }
+            else
+            {
+                Screen.SetResolution(1280, 360, false);
+                isFullscreen = false;
+            }
+        }
+    }
+
+    public void BeginGame()
     {
         // Called by StartingScene when it finished to actually start the game
         timer.StartTimer();

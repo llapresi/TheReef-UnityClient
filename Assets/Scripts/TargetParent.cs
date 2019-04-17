@@ -113,13 +113,14 @@ public class TargetParent : MonoBehaviour {
     public void MoveDown()
     {
         Vector3 tempPos = transform.position;
-        tempPos.y -= fallSpeed;
+        tempPos.y -= (fallSpeed / .016f) * Time.deltaTime;
         transform.position = tempPos;
 
         if (tempPos.y <= -50.0f)
         {
             DestroyItem();
         }
+        Debug.Log(Time.deltaTime);
     }
 
     public void DestroyItem()
