@@ -10,9 +10,9 @@ public class UIEndingManagerScript : MonoBehaviour {
     private List<UITransition> uiTransitions;
 
     
-    public Text introText;    //Welcome To
-    public Text introTextTwo; //The Reef
-    public Text descText;     //11.1 billion
+    public Text introText;    //You managed to save
+    public Text introTextTwo; //Percentage
+    private CoralManaging coralManager; //Access to %
 
     public LoadIntro parentSceneLoader;
     public float endTime = 38.0f;
@@ -73,6 +73,11 @@ public class UIEndingManagerScript : MonoBehaviour {
             text.CrossFadeAlpha(0.0f, duration, false);
         }
 
+        public void ChangeText(string newText)
+        {
+            text.text = newText;
+        }
+
     }
 
     public class ImageTransition : UITransition
@@ -130,15 +135,26 @@ public class UIEndingManagerScript : MonoBehaviour {
     void Start()
     {
         // Grab out LoadIntro component from the main scene
-        parentSceneLoader = GameObject.Find("SceneManager").GetComponent<LoadIntro>();
+        parentSceneLoader = GameObject.Find("SceneManager").GetComponent<LoadIntro>(); 
+
+        //Get our percentage
+        coralManager = parentSceneLoader.coral.GetComponent<CoralManaging>();
+        float percentSaved = coralManager.GetPercentCollectedRounded();
 
         totalTime = 0.0f;
         uiTransitions = new List<UITransition>();
 
         //(UI to display, time to enter, time to leave)
-        uiTransitions.Add(new TextTransition(introText, 1.0f, 5.0f));
-        uiTransitions.Add(new TextTransition(introTextTwo, 2.0f, 5.0f));
-        uiTransitions.Add(new TextTransition(descText, 7.0f, 11.0f));
+        uiTransitions.Add(new TextTransition(introText, 1.0f, 7.0f));
+
+        //This is a special text, so we change its %
+        TextTransition percentText = new TextTransition(introTextTwo, 2.0f, 7.0f);
+        percentText.ChangeText(percentSaved + "% of the reef");
+
+        //now add it
+        uiTransitions.Add(percentText);
+
+
         
         // Update is called once per frame
     }

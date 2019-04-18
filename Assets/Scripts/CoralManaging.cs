@@ -177,18 +177,6 @@ public class CoralManaging : MonoBehaviour {
     //not the transition needs to happen, and in the future we can also trigger events with our coral
     void PopulateReefWeight()
     {
-        /*
-        reefWeightTransitions[0] = new ReefWeight(1.0f, 0.9f);
-        reefWeightTransitions[1] = new ReefWeight(0.9f, 0.8f);
-        reefWeightTransitions[2] = new ReefWeight(0.8f, 0.7f);
-        reefWeightTransitions[3] = new ReefWeight(0.7f, 0.6f);
-        reefWeightTransitions[4] = new ReefWeight(0.6f, 0.5f);
-        reefWeightTransitions[5] = new ReefWeight(0.5f, 0.4f);
-        reefWeightTransitions[6] = new ReefWeight(0.4f, 0.3f);
-        reefWeightTransitions[7] = new ReefWeight(0.3f, 0.2f);
-        reefWeightTransitions[8] = new ReefWeight(0.2f, 0.1f);
-        reefWeightTransitions[9] = new ReefWeight(0.1f, 0.0f);
-        */
         float val = 1.0f;
 
         for (int i = 0; i < reefWeightTransitions.Length; i++)
@@ -197,5 +185,11 @@ public class CoralManaging : MonoBehaviour {
             val -= .1f;
         }
     }//End PopulateReefWeight
+
+    public float GetPercentCollectedRounded()
+    {
+        int value = Mathf.RoundToInt(percentageCollected * 100);
+        return value;
+    }
     
 }

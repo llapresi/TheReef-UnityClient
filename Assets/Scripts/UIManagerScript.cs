@@ -30,7 +30,7 @@ public class UIManagerScript : MonoBehaviour {
     public UIBubbleImage bubble;
     public UIBubbleImage phone;
     public LoadIntro parentSceneLoader;
-    public float endTime = 38.0f;
+    public float endTime = 41.0f;
 
 
     public class UITransition
@@ -149,6 +149,8 @@ public class UIManagerScript : MonoBehaviour {
 
         postProcessorScript = parentSceneLoader.coral.postProcessorScript;
         shouldKillReef = true;
+        //Reset the weight to make it clean again
+        postProcessorScript.weight = 0.0f;
 
         totalTime = 0.0f;
         uiTransitions = new List<UITransition>();
@@ -160,10 +162,20 @@ public class UIManagerScript : MonoBehaviour {
         uiTransitions.Add(new TextTransition(descTextTwo, 12.0f, 16.0f));
         uiTransitions.Add(new TextTransition(prompt, 17.0f, 22.0f));
         //Final prompt happens at 31 seconds. Lets start off with the reef all pretty, then kill it.
-        uiTransitions.Add(new TextTransition(final, 31.0f, 35.0f));
+        uiTransitions.Add(new TextTransition(final, 34.0f, 38.0f)); // 31, 35
 
         //uiTransitions.Add(new ImageTransition(bottle, 23.0f, 30.0f));
 
+        uiTransitions.Add(new TextTransition(bottleText, 23.0f, 25.0f));
+        uiTransitions.Add(new TextTransition(bubbleText, 26.0f, 28.0f));
+        uiTransitions.Add(new TextTransition(phoneText, 29.0f, 31.0f));
+
+        uiTransitions.Add(new BubbleGroupTransition(bottle, 23.0f, 32.0f));
+        uiTransitions.Add(new BubbleGroupTransition(bubble, 26.0f, 32.0f));
+        uiTransitions.Add(new BubbleGroupTransition(phone, 29.0f, 32.0f));
+
+        /*
+        //Old Transition times
         uiTransitions.Add(new TextTransition(bottleText, 23.0f, 25.0f));
         uiTransitions.Add(new TextTransition(bubbleText, 25.0f, 27.0f));
         uiTransitions.Add(new TextTransition(phoneText, 27.0f, 29.0f));
@@ -171,7 +183,9 @@ public class UIManagerScript : MonoBehaviour {
         uiTransitions.Add(new BubbleGroupTransition(bottle, 23.0f, 30.0f));
         uiTransitions.Add(new BubbleGroupTransition(bubble, 25.0f, 30.0f));
         uiTransitions.Add(new BubbleGroupTransition(phone, 27.0f, 30.0f));
-        
+        */
+
+
         // Update is called once per frame
     }
     void Update () {
@@ -232,7 +246,7 @@ public class UIManagerScript : MonoBehaviour {
     //Run this once in the beginning to kill the reef at a certain time slot
     void KillReef()
     {
-        if (shouldKillReef && totalTime >= 31.0f)
+        if (shouldKillReef && totalTime >= 34.0f)
         {
             StartCoroutine(IncrementWeightValue(0.0f, 1.0f));
             shouldKillReef = false;

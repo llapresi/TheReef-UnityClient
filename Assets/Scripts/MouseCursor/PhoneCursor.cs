@@ -14,6 +14,9 @@ public class PhoneCursor : MonoBehaviour {
     public Vector3 offset;
     public Vector3 screenDimensions;
     private Color cursorColor;
+    private UnityEngine.UI.Image cursorImage;
+
+    public CursorImageManager cursorImages;
 
     // Storing our current and previous rotations for cursor interp
     Vector2 storedRotation;
@@ -35,6 +38,7 @@ public class PhoneCursor : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        cursorImages = GameObject.FindGameObjectWithTag("CursorImages").GetComponent<CursorImageManager>();
         camera = Camera.main;
         GameObject newUICursor = Instantiate(cursorPrefab);
         GameObject uiCanvas = GameObject.Find("Canvas");
@@ -42,8 +46,8 @@ public class PhoneCursor : MonoBehaviour {
         newUICursor.transform.SetParent(uiCanvas.transform);
         cursorPosition = newUICursor.GetComponent<RectTransform>();
         cursorPosition.localScale = Vector3.one;
-        UnityEngine.UI.Image cursorImage = newUICursor.GetComponent<UnityEngine.UI.Image>();
-        cursorImage.color = cursorColor;
+        cursorImage = newUICursor.GetComponent<UnityEngine.UI.Image>();
+        cursorImage.sprite = cursorImages.GetNewCursorImage();
         offset = new Vector3(0.0f, 0.0f, 0.0f);
         RectTransform canvasSize = uiCanvas.GetComponent<RectTransform>();
         screenDimensions = new Vector2(canvasSize.rect.width, canvasSize.rect.height);
@@ -72,7 +76,6 @@ public class PhoneCursor : MonoBehaviour {
         if (Physics.Raycast(Ray, out hit, 300.0f, layerMask))
         {
             // Get the target info component
-            Debug.Log("Did Hit");
             TargetParent targetWeHit = hit.collider.gameObject.GetComponent<TargetParent>();
             // Send message with target stuff
             TargetInfoMessage msg = new TargetInfoMessage();
@@ -133,6 +136,8 @@ public class PhoneCursor : MonoBehaviour {
 
     void OnDestroy()
     {
+        //Give back this sprite to the cursor image manager, and add it back to the list
+        cursorImages.GiveBackCursorImage(cursorImage.sprite);
         Destroy(cursorPosition.gameObject);
     }
 

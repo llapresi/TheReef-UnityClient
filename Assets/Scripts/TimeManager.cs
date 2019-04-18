@@ -43,7 +43,7 @@ public class TimeManager : MonoBehaviour {
                 timerText.text = minuteText + ":" + secondText;
             } else
             {
-                timerText.text = secondText;
+                timerText.text = "0:" + secondText;
             }
             if(time <= 0)
             {
@@ -57,7 +57,7 @@ public class TimeManager : MonoBehaviour {
     public void UpdateProgressBar()
     {
         //Turn our time to a %
-        float progress = progress = (1 - (time / startingTime));
+        float progress = (1 - (time / startingTime));
         progressBar.value = (progress);
     }
 

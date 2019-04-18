@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ItemManager
   - FishParticle
+  - CursorImages
   layers:
   - Default
   - TransparentFX

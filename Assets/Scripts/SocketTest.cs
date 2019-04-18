@@ -39,6 +39,8 @@ public class SocketTest : MonoBehaviour {
     public GameObject phoneCursorPrefab;
     private Scene m_scene;
 
+    private int userCap = 5;
+
     //List<StoredCursorMove> queuedCursorMoves;
     //List<StoredPlayerFire> queuedPlayerFires;
     //List<int> queuedUsers;
@@ -185,8 +187,12 @@ public class SocketTest : MonoBehaviour {
                 queuedPlayerFires.Enqueue(new StoredPlayerFire(fireMsg.id, fireMsg.held));
                 break;
             case "userConnect":
-                UserConnectMessage userMsg = JsonUtility.FromJson<UserConnectMessage>(e.Data);
-                queuedUsers.Enqueue(userMsg.id);
+                //Only add a new user if there is room
+                if (users.Count < userCap)
+                {
+                    UserConnectMessage userMsg = JsonUtility.FromJson<UserConnectMessage>(e.Data);
+                    queuedUsers.Enqueue(userMsg.id);
+                }
                 break;
             case "userDisconnect":
                 UserConnectMessage userDCMsg = JsonUtility.FromJson<UserConnectMessage>(e.Data);

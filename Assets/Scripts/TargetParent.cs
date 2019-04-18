@@ -74,7 +74,12 @@ public class TargetParent : MonoBehaviour {
 
     public void DoHit(PhoneCursor p_userID)
     {
-        heldBy = p_userID;
+        //only register hits if its not already held.
+        //i.e., no more thieving
+        if (heldBy == null)
+        {
+            heldBy = p_userID;
+        }
         //StartCoroutine(ChangeColor());
     }
 
