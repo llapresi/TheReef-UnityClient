@@ -9,6 +9,7 @@ public class UIManagerScript : MonoBehaviour {
 
     private float totalTime;
     private List<UITransition> uiTransitions;
+    private bool shouldStartGame;
 
     private bool shouldKillReef;
     private PostProcessVolume postProcessorScript;
@@ -149,6 +150,7 @@ public class UIManagerScript : MonoBehaviour {
 
         postProcessorScript = parentSceneLoader.coral.postProcessorScript;
         shouldKillReef = true;
+        shouldStartGame = false;
         //Reset the weight to make it clean again
         postProcessorScript.weight = 0.0f;
 
@@ -171,8 +173,8 @@ public class UIManagerScript : MonoBehaviour {
         uiTransitions.Add(new TextTransition(phoneText, 29.0f, 31.0f));
 
         uiTransitions.Add(new BubbleGroupTransition(bottle, 23.0f, 32.0f));
-        uiTransitions.Add(new BubbleGroupTransition(bubble, 26.0f, 32.0f));
-        uiTransitions.Add(new BubbleGroupTransition(phone, 29.0f, 32.0f));
+        uiTransitions.Add(new BubbleGroupTransition(bubble, 25.0f, 32.0f));
+        uiTransitions.Add(new BubbleGroupTransition(phone, 28.0f, 32.0f));
 
         /*
         //Old Transition times
@@ -189,13 +191,17 @@ public class UIManagerScript : MonoBehaviour {
         // Update is called once per frame
     }
     void Update () {
+        PlayOnPress();
         ManageTransitions();
         CheckIfOver();
     }
 
     void ManageTransitions()
     {
-        totalTime += Time.deltaTime;
+        if (shouldStartGame)
+        {
+            totalTime += Time.deltaTime;
+        }
 
         foreach (UITransition t in uiTransitions)
         {
@@ -250,6 +256,14 @@ public class UIManagerScript : MonoBehaviour {
         {
             StartCoroutine(IncrementWeightValue(0.0f, 1.0f));
             shouldKillReef = false;
+        }
+    }
+
+    void PlayOnPress()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            shouldStartGame = true;
         }
     }
 
