@@ -16,7 +16,7 @@ public class CoralManaging : MonoBehaviour {
     public GameObject timeObject;
     private TimeManager timeManagerScript;
 
-    private ReefWeight[] reefWeightTransitions;
+    public ReefWeight[] reefWeightTransitions;
 
     //Class to keep track of whether or not weight transitions happened yet
     public class ReefWeight
@@ -24,18 +24,32 @@ public class CoralManaging : MonoBehaviour {
         public bool shouldTransition;
         public float startingPoint;
         public float endingPoint;
+        public float transitionPoint;
 
 
-        public ReefWeight(float p_startingPoint, float p_endingPoint)
+        public ReefWeight(float p_startingPoint, float p_endingPoint, float p_transitionPoint)
         {
             shouldTransition = true;
             startingPoint = p_startingPoint;
             endingPoint = p_endingPoint;
+            transitionPoint = p_transitionPoint;
         }
 
         public void IsDone()
         {
             shouldTransition = false;
+        }
+
+        public bool CheckTransitionTime(float percentage){
+            //We've reached the threshold, so do the transition
+            //Debug.Log("Percentage: " + percentage + "TransitionPoint: " + transitionPoint + "ShouldTransition: " + shouldTransition);
+            if (percentage > transitionPoint && shouldTransition)
+            {
+                Debug.Log("Start the transition");
+                IsDone();
+            }
+            //Return false, until the transition is done
+            return (!shouldTransition);
         }
     }//End reef weight class
 
@@ -72,93 +86,24 @@ public class CoralManaging : MonoBehaviour {
             return;
         }
 
-        //Debug.Log("Percentage: " + percentageCollected);
-        //Debug.Log("Weight: " + postProcessorScript.weight);
+        bool atLeastTenPercent = false;
 
-        if (percentageCollected >= 0.975f)
+        foreach (ReefWeight r in reefWeightTransitions)
         {
-            if (reefWeightTransitions[9].shouldTransition)
+            if (r.CheckTransitionTime(percentageCollected))
             {
-                StartCoroutine(DecrementWeightValue(.1f, .0f));
-                reefWeightTransitions[9].IsDone();
+                StartCoroutine(DecrementWeightValue(r.startingPoint, r.endingPoint));
+                atLeastTenPercent = true;
             }
+
         }
-        else if (percentageCollected > .9)
-        {
-            if (reefWeightTransitions[8].shouldTransition)
-            {
-                StartCoroutine(DecrementWeightValue(.2f, .1f));
-                reefWeightTransitions[8].IsDone();
-            }
-        }
-        else if (percentageCollected > .8)
-        {
-            if (reefWeightTransitions[7].shouldTransition)
-            {
-                StartCoroutine(DecrementWeightValue(.3f, .2f));
-                reefWeightTransitions[7].IsDone();
-            }
-        }
-        else if (percentageCollected > .7)
-        {
-            if (reefWeightTransitions[6].shouldTransition)
-            {
-                StartCoroutine(DecrementWeightValue(.4f, .3f));
-                reefWeightTransitions[6].IsDone();
-            }
-        }
-        else if (percentageCollected > .6)
-        {
-            if (reefWeightTransitions[5].shouldTransition)
-            {
-                StartCoroutine(DecrementWeightValue(.5f, .4f));
-                reefWeightTransitions[5].IsDone();
-            }
-        }
-        else if (percentageCollected > .5)
-        {
-            if (reefWeightTransitions[4].shouldTransition)
-            {
-                StartCoroutine(DecrementWeightValue(.6f, .5f));
-                reefWeightTransitions[4].IsDone();
-            }
-        }
-        else if (percentageCollected > .4)
-        {
-            if (reefWeightTransitions[3].shouldTransition)
-            {
-                StartCoroutine(DecrementWeightValue(.7f, .6f));
-                reefWeightTransitions[3].IsDone();
-            }
-        }
-        else if (percentageCollected > .3)
-        {
-            if (reefWeightTransitions[2].shouldTransition)
-            {
-                StartCoroutine(DecrementWeightValue(.8f, .7f));
-                reefWeightTransitions[2].IsDone();
-            }
-        }
-        else if (percentageCollected > .2)
-        {
-            if (reefWeightTransitions[1].shouldTransition)
-            {
-                StartCoroutine(DecrementWeightValue(.9f, .8f));
-                reefWeightTransitions[1].IsDone();
-            }
-        }
-        else if (percentageCollected > .1)
-        {
-            if(reefWeightTransitions[0].shouldTransition)
-            {
-                StartCoroutine(DecrementWeightValue(reefWeightTransitions[0].startingPoint, reefWeightTransitions[0].endingPoint));
-                reefWeightTransitions[0].IsDone();
-            }
-        }
-        else
+
+        //Default weight if none of these conditions have been met
+        if (!atLeastTenPercent)
         {
             postProcessorScript.weight = 1.0f;
         }
+
     }//end manage percent collected
     
     //Decrement from the start to the end point over time
@@ -181,9 +126,15 @@ public class CoralManaging : MonoBehaviour {
 
         for (int i = 0; i < reefWeightTransitions.Length; i++)
         {
-            reefWeightTransitions[i] = new ReefWeight(val, (val - .1f));
+            reefWeightTransitions[i] = new ReefWeight(val, (val - .1f), ((i + 1) * 0.1f));
+            if ( i == reefWeightTransitions.Length -1)
+            {
+                reefWeightTransitions[i].endingPoint = 0.0f;
+            }
             val -= .1f;
+            Debug.Log("Index: " + i + "Start: " + reefWeightTransitions[i].startingPoint + "End: " + reefWeightTransitions[i].endingPoint + "Start: " + reefWeightTransitions[i].transitionPoint );
         }
+
     }//End PopulateReefWeight
 
     public float GetPercentCollectedRounded()

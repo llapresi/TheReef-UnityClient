@@ -13420,7 +13420,7 @@ MonoBehaviour:
   timer: {fileID: 1506386234}
   items: {fileID: 1242916172}
   coral: {fileID: 942459411}
-  skipIntro: 0
+  skipIntro: 1
 --- !u!4 &1592069626
 Transform:
   m_ObjectHideFlags: 0
