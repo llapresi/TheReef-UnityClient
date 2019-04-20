@@ -117,6 +117,7 @@ public class TimeManager : MonoBehaviour {
     {
         if (shouldBringBarDown)
         {
+            //Distance to bring it down
             StartCoroutine(BringBarDown(12.0f));
             shouldBringBarDown = false;
         }
@@ -129,7 +130,7 @@ public class TimeManager : MonoBehaviour {
         while(n < distance)
         {
             n += (-1 * speed);//reverse the translation
-            progBar.Translate(0.0f, speed, 0.0f);
+            progBar.Translate(0.0f, (speed / .016f) * Time.deltaTime, 0.0f);
             yield return null;
         }
     }

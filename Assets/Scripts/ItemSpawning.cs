@@ -68,7 +68,7 @@ public class ItemSpawning : MonoBehaviour {
 
                 //Also give it a slight rotation
                 Vector3 tweakedRotation = tempObj.transform.eulerAngles;
-                tweakedRotation.z = (float)(Random.Range(0, 45) - 22.5);
+                tweakedRotation.z = (float)(Random.Range(-22.5f, 67.5f) - 22.5);
                 tempObj.transform.eulerAngles = tweakedRotation;
 
                 //Add it to our list

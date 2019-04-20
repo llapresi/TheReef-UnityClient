@@ -27,7 +27,11 @@ public class CoralManaging : MonoBehaviour {
         public float endingPoint;
         public float transitionPoint;
 
-
+        //Class to hold transitions for reefWeight
+        //Parameters:
+        //Starting float of post processing weight
+        //ending float of post processing weight to transition to
+        //Transtion float, which looks at the % of the reef that is clean. if > then the %, the trasition triggers
         public ReefWeight(float p_startingPoint, float p_endingPoint, float p_transitionPoint)
         {
             shouldTransition = true;
@@ -48,7 +52,6 @@ public class CoralManaging : MonoBehaviour {
 
         public bool CheckTransitionTime(float percentage){
             //We've reached the threshold, so do the transition
-            //Debug.Log("Percentage: " + percentage + "TransitionPoint: " + transitionPoint + "ShouldTransition: " + shouldTransition);
 
             if (!shouldTransition)
             {//If it shouldnt transition, were done with it
