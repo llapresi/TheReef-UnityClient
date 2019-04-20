@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.029020123, g: 0.37532383, b: 0.47584528, a: 1}
+  m_IndirectSpecularColor: {r: 0.029020127, g: 0.37532383, b: 0.47584516, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1412,6 +1412,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c7e487210f90f49acfc60442b6f210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yOffset: 50
+  trashPrefabs:
+  - {fileID: 1259419018075364, guid: cb0868fa64ba75a4483b179ec7f17aea, type: 2}
+  - {fileID: 1220100439815096, guid: dac48c9b2561a8e41ae4bbbb452805bd, type: 2}
+  - {fileID: 1003026768442996, guid: 136ac1463528a5e47a220c7623da8c1b, type: 2}
   introText: {fileID: 1012320447}
   introTextTwo: {fileID: 675441281}
   descText: {fileID: 1026850443}
@@ -1425,7 +1430,7 @@ MonoBehaviour:
   bubble: {fileID: 1583261840}
   phone: {fileID: 1576056598}
   parentSceneLoader: {fileID: 0}
-  endTime: 38
+  endTime: 42
 --- !u!4 &1378752820
 Transform:
   m_ObjectHideFlags: 0

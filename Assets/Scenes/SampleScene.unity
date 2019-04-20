@@ -13534,7 +13534,7 @@ MonoBehaviour:
   timerRunning: 0
   timerText: {fileID: 420855141}
   progressBar: {fileID: 1048354665}
-  time: 90
+  time: 91
   speed: 0
 --- !u!4 &1506386235
 Transform:

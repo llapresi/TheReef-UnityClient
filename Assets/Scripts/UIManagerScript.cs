@@ -11,9 +11,14 @@ public class UIManagerScript : MonoBehaviour {
     private List<UITransition> uiTransitions;
     private List<BubbleGroupTransition> bubbleTransitions;
     private bool shouldStartGame;
+    private Vector3[] SpawnPoints;
+    public float yOffset = 0.0f;
 
     private bool shouldKillReef;
     private PostProcessVolume postProcessorScript;
+
+    public GameObject[] trashPrefabs;
+    private bool shouldSpawnPreGameTrash;
 
 
     public Text introText;    //Welcome To
@@ -33,8 +38,8 @@ public class UIManagerScript : MonoBehaviour {
     public UIBubbleImage phone;
     public LoadIntro parentSceneLoader;
 
-    public float endTime = 41.0f;
-    private float reefKillTime = 34.0f;
+    public float endTime = 42.0f;
+    private float reefKillTime = 35.0f;
 
 
     public class UITransition
@@ -170,6 +175,9 @@ public class UIManagerScript : MonoBehaviour {
         shouldStartGame = false;
         //Reset the weight to make it clean again
         postProcessorScript.weight = 0.0f;
+        shouldSpawnPreGameTrash = true;
+        CreateSpawnPoints();
+
 
         totalTime = 0.0f;
         uiTransitions = new List<UITransition>();
@@ -180,20 +188,21 @@ public class UIManagerScript : MonoBehaviour {
         uiTransitions.Add(new TextTransition(introTextTwo, 2.0f, 5.0f));
         uiTransitions.Add(new TextTransition(descText, 7.0f, 11.0f));
         uiTransitions.Add(new TextTransition(descTextTwo, 12.0f, 16.0f));
-        uiTransitions.Add(new TextTransition(prompt, 17.0f, 22.0f));
+        uiTransitions.Add(new TextTransition(prompt, 17.0f, 21.0f));
         //Final prompt happens at 31 seconds. Lets start off with the reef all pretty, then kill it.
-        uiTransitions.Add(new TextTransition(final, 34.0f, 38.0f)); // 31, 35
+        uiTransitions.Add(new TextTransition(final, reefKillTime, 41.0f)); // 31, 35
 
         //uiTransitions.Add(new ImageTransition(bottle, 23.0f, 30.0f));
 
-        uiTransitions.Add(new TextTransition(bottleText, 24.0f, 26.0f));
-        uiTransitions.Add(new TextTransition(bubbleText, 27.0f, 29.0f));
-        uiTransitions.Add(new TextTransition(phoneText, 30.0f, 32.0f));
+        uiTransitions.Add(new TextTransition(bottleText, 22.0f, 25.0f));
+        uiTransitions.Add(new TextTransition(bubbleText, 26.0f, 29.0f));
+        uiTransitions.Add(new TextTransition(phoneText, 30.0f, 33.0f));
 
         //Now has a time where it will peak into view
-        bubbleTransitions.Add(new BubbleGroupTransition(bottle, 24.0f, 32.0f, 23.0f));
-        bubbleTransitions.Add(new BubbleGroupTransition(bubble, 27.0f, 32.0f, 23.0f));
-        bubbleTransitions.Add(new BubbleGroupTransition(phone, 30.0f, 32.0f, 23.0f));
+        //first one comes in without the peek, so add it to ui transitions
+        uiTransitions.Add(new BubbleGroupTransition(bottle, 22.0f, 34.0f, 24.0f));
+        bubbleTransitions.Add(new BubbleGroupTransition(bubble, 26.0f, 34.0f, 22.0f));
+        bubbleTransitions.Add(new BubbleGroupTransition(phone, 30.0f, 34.0f, 22.0f));
 
         /*
         //Old Transition times
@@ -213,6 +222,7 @@ public class UIManagerScript : MonoBehaviour {
         PlayOnPress();
         ManageTransitions();
         CheckIfOver();
+        SpawnPreGameTrash();
     }
 
     void ManageTransitions()
@@ -317,5 +327,51 @@ public class UIManagerScript : MonoBehaviour {
             postProcessorScript.weight = f;
             yield return null;
         }
+    }
+
+    void CreateSpawnPoints()
+    {
+        SpawnPoints = new Vector3[5];
+
+        SpawnPoints[0] = new Vector3 (-45.7f, yOffset + 25.7f, 0.0f);
+        SpawnPoints[1] = new Vector3(0.0f, yOffset + 6f, 0.0f);
+        SpawnPoints[2] = new Vector3(47.3f, yOffset + 18.9f, 0.0f);
+        SpawnPoints[3] = new Vector3(-94.4f, yOffset + -3.2f, 0.0f);
+        SpawnPoints[4] = new Vector3(101f, yOffset + 23.03f, 0.0f);
+    }
+
+    void SpawnPreGameTrash()
+    {
+        if (totalTime >= reefKillTime && shouldSpawnPreGameTrash)
+        {
+            Debug.Log("Spawning Trash");
+            for (int i = 0; i < SpawnPoints.Length; i++)
+            {
+                //Pick a random trash object to instantiate
+                GameObject tempObj = Instantiate(
+                    trashPrefabs[Random.Range(0, (trashPrefabs.Length))],
+                    SpawnPoints[i],
+                    Quaternion.identity);
+
+                //Get Parents location
+
+                // xRandomRange = 15.0f;
+                //yRandomRange = 50.0f;
+
+                //Stagger the locations slightly, ideally this would be done with 1/16 of the scene width
+                //randomPosition.x += Random.Range((-xRandomRange), xRandomRange);
+                //randomPosition.y += Random.value * yRandomRange;
+
+                //Set that to our bottles location
+
+                //Also give it a slight rotation
+                Vector3 tweakedRotation = tempObj.transform.eulerAngles;
+                tweakedRotation.z = (float)(Random.Range(0, 45) - 22.5);
+                tempObj.transform.eulerAngles = tweakedRotation;
+            }
+
+            shouldSpawnPreGameTrash = false;
+        }
+        
     }
 }

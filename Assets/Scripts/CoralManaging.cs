@@ -17,6 +17,7 @@ public class CoralManaging : MonoBehaviour {
     private TimeManager timeManagerScript;
 
     public ReefWeight[] reefWeightTransitions;
+    bool atLeastTenPercent;
 
     //Class to keep track of whether or not weight transitions happened yet
     public class ReefWeight
@@ -48,12 +49,20 @@ public class CoralManaging : MonoBehaviour {
         public bool CheckTransitionTime(float percentage){
             //We've reached the threshold, so do the transition
             //Debug.Log("Percentage: " + percentage + "TransitionPoint: " + transitionPoint + "ShouldTransition: " + shouldTransition);
+
+            if (!shouldTransition)
+            {//If it shouldnt transition, were done with it
+                return false;
+            }
             if (percentage > transitionPoint && shouldTransition)
             {
                 IsDone();
+                Debug.Log("Transitioning: " + "Start: " + startingPoint + "End: " + endingPoint + "%: " + transitionPoint);
+                return true;
             }
+            
             //Return false, until the transition is done
-            return (!shouldTransition);
+            return false;
         }
     }//End reef weight class
 
@@ -66,6 +75,8 @@ public class CoralManaging : MonoBehaviour {
         postProcessorScript = postProcessor.GetComponent<PostProcessVolume>();
         timeManagerScript = timeObject.GetComponent<TimeManager>();
 
+        //Check to see if the reef hasnt made progress yet
+        atLeastTenPercent = false;
         PopulateReefWeight();
     }
 	
@@ -90,7 +101,7 @@ public class CoralManaging : MonoBehaviour {
             return;
         }
 
-        bool atLeastTenPercent = false;
+
 
         foreach (ReefWeight r in reefWeightTransitions)
         {
@@ -114,7 +125,7 @@ public class CoralManaging : MonoBehaviour {
     //Gradually change the post processing weight
     IEnumerator DecrementWeightValue(float start, float end)
     {
-        for (float f = start; f > end; f -= 0.05f)
+        for (float f = start; f > end; f -= 0.005f)
         {
             postProcessorScript.weight = f;
             yield return null;
@@ -126,22 +137,20 @@ public class CoralManaging : MonoBehaviour {
     //not the transition needs to happen, and in the future we can also trigger events with our coral
     void PopulateReefWeight()
     {
-        reefWeightTransitions = new ReefWeight[10];
+        reefWeightTransitions = new ReefWeight[8];
 
         //Starting weight, Ending weight, percentageCompleted at which the transition starts
-        /*
-        reefWeightTransitions[0] = new ReefWeight(1.0f, 0.7f, 0.75f);
-        reefWeightTransitions[1] = new ReefWeight(0.7f, 0.4f, 0.5f);
-        reefWeightTransitions[2] = new ReefWeight(0.4f, 0.1f, 0.25f);
-
-        reefWeightTransitions[2] = new ReefWeight(0.6f, 0.5f, 0.3f);
-        reefWeightTransitions[3] = new ReefWeight(0.5f, 0.4f, 0.5f);
+        
+        reefWeightTransitions[0] = new ReefWeight(1.0f, 0.8f, 0.15f);
+        reefWeightTransitions[1] = new ReefWeight(0.8f, 0.6f, 0.35f);
+        reefWeightTransitions[2] = new ReefWeight(0.6f, 0.5f, 0.5f);
+        reefWeightTransitions[3] = new ReefWeight(0.5f, 0.4f, 0.6f);
         reefWeightTransitions[4] = new ReefWeight(0.4f, 0.3f, 0.7f);
         reefWeightTransitions[5] = new ReefWeight(0.3f, 0.2f, 0.8f);
         reefWeightTransitions[6] = new ReefWeight(0.2f, 0.1f, 0.9f);
-        reefWeightTransitions[7] = new ReefWeight(0.1f, 0.0f, 0.97f);*/
+        reefWeightTransitions[7] = new ReefWeight(0.1f, 0.0f, 0.97f);
 
-        
+        /*
         float val = 1.0f;
 
         for (int i = 0; i < reefWeightTransitions.Length; i++)
@@ -154,7 +163,7 @@ public class CoralManaging : MonoBehaviour {
             val -= .1f;
             //Debug.Log("Index: " + i + "Start: " + reefWeightTransitions[i].startingPoint + "End: " + reefWeightTransitions[i].endingPoint + "Start: " + reefWeightTransitions[i].transitionPoint );
         }
-        
+        */
 
     }//End PopulateReefWeight
 
