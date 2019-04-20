@@ -9,6 +9,7 @@ public class UIManagerScript : MonoBehaviour {
 
     private float totalTime;
     private List<UITransition> uiTransitions;
+    private List<BubbleGroupTransition> bubbleTransitions;
     private bool shouldStartGame;
 
     private bool shouldKillReef;
@@ -31,7 +32,9 @@ public class UIManagerScript : MonoBehaviour {
     public UIBubbleImage bubble;
     public UIBubbleImage phone;
     public LoadIntro parentSceneLoader;
+
     public float endTime = 41.0f;
+    private float reefKillTime = 34.0f;
 
 
     public class UITransition
@@ -119,11 +122,15 @@ public class UIManagerScript : MonoBehaviour {
     public class BubbleGroupTransition : UITransition
     {
         public UIBubbleImage parent;
+        public float peekTime;
+        public bool shouldPeek;
 
-        public BubbleGroupTransition(UIBubbleImage p_bubbleParent, float p_startTime, float p_endTime) : base(p_startTime, p_endTime)
+        public BubbleGroupTransition(UIBubbleImage p_bubbleParent, float p_startTime, float p_endTime,float p_peekTime) : base(p_startTime, p_endTime)
         {
             parent = p_bubbleParent;
             parent.CrossFadeAlphaAll(0.0f, 0.0f, false);
+            peekTime = p_peekTime;
+            shouldPeek = true;
         }
 
         public override void FadeIn(float duration)
@@ -137,6 +144,16 @@ public class UIManagerScript : MonoBehaviour {
         public override void FadeOut(float duration)
         {
             parent.CrossFadeAlphaAll(0.0f, duration, false);
+        }
+
+        public void PeekIn(float duration, float opacity)
+        {
+            //Only peek in once
+            if (shouldPeek)
+            {
+                parent.CrossFadeAlphaAll(opacity, duration, false);
+                shouldPeek = false;
+            }
         }
 
     }
@@ -156,6 +173,7 @@ public class UIManagerScript : MonoBehaviour {
 
         totalTime = 0.0f;
         uiTransitions = new List<UITransition>();
+        bubbleTransitions = new List<BubbleGroupTransition>();
 
         //(UI to display, time to enter, time to leave)
         uiTransitions.Add(new TextTransition(introText, 1.0f, 5.0f));
@@ -168,13 +186,14 @@ public class UIManagerScript : MonoBehaviour {
 
         //uiTransitions.Add(new ImageTransition(bottle, 23.0f, 30.0f));
 
-        uiTransitions.Add(new TextTransition(bottleText, 23.0f, 25.0f));
-        uiTransitions.Add(new TextTransition(bubbleText, 26.0f, 28.0f));
-        uiTransitions.Add(new TextTransition(phoneText, 29.0f, 31.0f));
+        uiTransitions.Add(new TextTransition(bottleText, 24.0f, 26.0f));
+        uiTransitions.Add(new TextTransition(bubbleText, 27.0f, 29.0f));
+        uiTransitions.Add(new TextTransition(phoneText, 30.0f, 32.0f));
 
-        uiTransitions.Add(new BubbleGroupTransition(bottle, 23.0f, 32.0f));
-        uiTransitions.Add(new BubbleGroupTransition(bubble, 25.0f, 32.0f));
-        uiTransitions.Add(new BubbleGroupTransition(phone, 28.0f, 32.0f));
+        //Now has a time where it will peak into view
+        bubbleTransitions.Add(new BubbleGroupTransition(bottle, 24.0f, 32.0f, 23.0f));
+        bubbleTransitions.Add(new BubbleGroupTransition(bubble, 27.0f, 32.0f, 23.0f));
+        bubbleTransitions.Add(new BubbleGroupTransition(phone, 30.0f, 32.0f, 23.0f));
 
         /*
         //Old Transition times
@@ -219,7 +238,29 @@ public class UIManagerScript : MonoBehaviour {
                 }
             }
         }
-
+        
+        foreach (BubbleGroupTransition b in bubbleTransitions)
+        {
+            if (b.shouldTransition)
+            {
+                if (totalTime >= b.startTime && b.shouldShow)
+                {
+                    b.FadeIn(1.0f);
+                    b.shouldShow = false;
+                }
+                if (totalTime >= b.endTime)
+                {
+                    b.FadeOut(1.0f);
+                    b.IsDone();
+                }
+            }
+            if (totalTime >= b.peekTime)
+            {
+                //duration, opacity
+                b.PeekIn(1.0f, 0.3f);
+            }
+        }
+        
         KillReef();
         
         
@@ -252,7 +293,7 @@ public class UIManagerScript : MonoBehaviour {
     //Run this once in the beginning to kill the reef at a certain time slot
     void KillReef()
     {
-        if (shouldKillReef && totalTime >= 34.0f)
+        if (shouldKillReef && totalTime >= reefKillTime)
         {
             StartCoroutine(IncrementWeightValue(0.0f, 1.0f));
             shouldKillReef = false;

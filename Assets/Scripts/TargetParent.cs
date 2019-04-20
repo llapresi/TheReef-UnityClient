@@ -76,10 +76,10 @@ public class TargetParent : MonoBehaviour {
     {
         //only register hits if its not already held.
         //i.e., no more thieving
-        if (heldBy == null)
-        {
+        //if (heldBy == null)
+        //{
             heldBy = p_userID;
-        }
+        //}
         //StartCoroutine(ChangeColor());
     }
 
