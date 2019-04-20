@@ -12067,7 +12067,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 513.9}
+  m_AnchoredPosition: {x: 0, y: 563.9}
   m_SizeDelta: {x: 3840, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1048354665
@@ -13250,6 +13250,7 @@ MonoBehaviour:
   timerText: {fileID: 420855141}
   progressBar: {fileID: 1048354665}
   time: 90
+  speed: 0
 --- !u!4 &1506386235
 Transform:
   m_ObjectHideFlags: 0
@@ -13813,7 +13814,7 @@ GameObject:
   - component: {fileID: 1703062159}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

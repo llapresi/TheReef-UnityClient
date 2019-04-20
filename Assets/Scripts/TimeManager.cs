@@ -12,6 +12,13 @@ public class TimeManager : MonoBehaviour {
     public float time = 60; //default 90 seconds for now
     float startingTime;
 
+    private bool shouldBringBarDown;
+
+ 
+    RectTransform progBar;
+    Vector3 startPos;
+    public float speed;
+
     // Reference to GameManager
     LoadIntro gameManager;
 
@@ -20,7 +27,12 @@ public class TimeManager : MonoBehaviour {
         gameManager = GameObject.Find("SceneManager").GetComponent<LoadIntro>();
         startingTime = time;
         timerRunning = false;
-        progressBar.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
+        HideUIElements();
+
+        //For progress bar
+        progBar = progressBar.GetComponent<RectTransform>();
+        startPos = progBar.transform.position;
+        speed = -0.15f;
     }
 
     // Update is called once per frame
@@ -51,6 +63,7 @@ public class TimeManager : MonoBehaviour {
             }
 
             UpdateProgressBar();
+            UpdateBarPosition();
         }
     }
 
@@ -66,6 +79,7 @@ public class TimeManager : MonoBehaviour {
         time = startingTime;
         timerRunning = true;
         progressBar.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        IntroduceUIElements();
     }
 
     void EndTimer()
@@ -75,11 +89,48 @@ public class TimeManager : MonoBehaviour {
         timerRunning = false;
         timerText.text = "";
         //hide progress bar
-        progressBar.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
+        HideUIElements();
     }
 
     public bool IsTimerRunning()
     {
         return timerRunning;
+    }
+
+    public void HideUIElements()
+    {
+        timerText.CrossFadeAlpha(0.0f, 0.0f, false);
+        progressBar.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
+    }
+
+    public void IntroduceUIElements()
+    {
+        Debug.Log("Introducing UI elements");
+        timerText.CrossFadeAlpha(1.0f, 5.0f, false);
+
+        progressBar.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        shouldBringBarDown = true;
+        progBar.transform.position = startPos;
+    }
+
+    public void UpdateBarPosition()
+    {
+        if (shouldBringBarDown)
+        {
+            StartCoroutine(BringBarDown(12.0f));
+            shouldBringBarDown = false;
+        }
+    }
+
+    IEnumerator BringBarDown(float distance)
+    {
+        float n = 0f;
+
+        while(n < distance)
+        {
+            n += (-1 * speed);//reverse the translation
+            progBar.Translate(0.0f, speed, 0.0f);
+            yield return null;
+        }
     }
 }

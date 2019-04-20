@@ -9,7 +9,7 @@ public class UIEndingManagerScript : MonoBehaviour {
     private float totalTime;
     private List<UITransition> uiTransitions;
 
-    
+
     public Text introText;    //You managed to save
     public Text introTextTwo; //Percentage
     private CoralManaging coralManager; //Access to %
@@ -160,7 +160,7 @@ public class UIEndingManagerScript : MonoBehaviour {
     }
     void Update () {
         ManageTransitions();
-        CheckIfOver();
+        RestartOnPress();
     }
 
     void ManageTransitions()
@@ -189,9 +189,9 @@ public class UIEndingManagerScript : MonoBehaviour {
         
     }//End Manage Transitions
 
-    void CheckIfOver()
+    void RestartOnPress()
     {
-        if (totalTime >= endTime)
+        if (Input.GetKeyDown("space"))
         {
             if (parentSceneLoader != null)
             {
