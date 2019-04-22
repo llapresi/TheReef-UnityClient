@@ -60,7 +60,7 @@ public class CoralManaging : MonoBehaviour {
             if (percentage > transitionPoint && shouldTransition)
             {
                 IsDone();
-                Debug.Log("Transitioning: " + "Start: " + startingPoint + "End: " + endingPoint + "%: " + transitionPoint);
+                Debug.Log("Transitioning: " + "Start: " + startingPoint + "End: " + endingPoint + " %: " + transitionPoint);
                 return true;
             }
             
@@ -173,7 +173,17 @@ public class CoralManaging : MonoBehaviour {
     public float GetPercentCollectedRounded()
     {
         int value = Mathf.RoundToInt(percentageCollected * 100);
+
+        //Check just in case...
+        if (value >= 100)
+        {
+            value = 100;
+        }
         return value;
     }
-    
+
+    public float GetPercentCollected()
+    {
+        return percentageCollected;
+    }
 }

@@ -8,6 +8,10 @@ public class TimeManager : MonoBehaviour {
     public bool timerRunning;
     public Text timerText;
     public Slider progressBar;
+    public Text percentText;
+    
+
+    public CoralManaging coralManager; //access to percent
 
     public float time = 60; //default 90 seconds for now
     float startingTime;
@@ -52,10 +56,10 @@ public class TimeManager : MonoBehaviour {
             //Display minutes only if theres a minute to display
             if (time > 60)
             {
-                timerText.text = minuteText + ":" + secondText;
+                timerText.text = minuteText + ":" + secondText + " seconds left";
             } else
             {
-                timerText.text = "0:" + secondText;
+                timerText.text = "0:" + secondText + " seconds left";
             }
             if(time <= 0)
             {
@@ -63,22 +67,27 @@ public class TimeManager : MonoBehaviour {
             }
 
             UpdateProgressBar();
-            UpdateBarPosition();
+            UpdatePercentText();
+            //UpdateBarPosition();
         }
     }
 
     public void UpdateProgressBar()
     {
         //Turn our time to a %
-        float progress = (1 - (time / startingTime));
-        progressBar.value = (progress);
+        //float progress = (1 - (time / startingTime));
+        progressBar.value = (coralManager.GetPercentCollected());
+    }
+
+    void UpdatePercentText()
+    {
+        percentText.text = coralManager.GetPercentCollectedRounded() + "%";
     }
 
     public void StartTimer()
     {
         time = startingTime;
         timerRunning = true;
-        progressBar.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         IntroduceUIElements();
     }
 
@@ -100,17 +109,20 @@ public class TimeManager : MonoBehaviour {
     public void HideUIElements()
     {
         timerText.CrossFadeAlpha(0.0f, 0.0f, false);
-        progressBar.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
+        percentText.CrossFadeAlpha(0.0f, 0.0f, false);
+        FadeInProgressBar(false);
+
+
     }
 
     public void IntroduceUIElements()
     {
-        Debug.Log("Introducing UI elements");
         timerText.CrossFadeAlpha(1.0f, 5.0f, false);
+        percentText.CrossFadeAlpha(1.0f, 5.0f, false);
+        FadeInProgressBar(true);
 
-        progressBar.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        shouldBringBarDown = true;
-        progBar.transform.position = startPos;
+        //shouldBringBarDown = true;
+        //progBar.transform.position = startPos;
     }
 
     public void UpdateBarPosition()
@@ -132,6 +144,28 @@ public class TimeManager : MonoBehaviour {
             n += (-1 * speed);//reverse the translation
             progBar.Translate(0.0f, (speed / .016f) * Time.deltaTime, 0.0f);
             yield return null;
+        }
+    }
+
+    //Progress bar is a bit more high mainentance, so when
+    //adjusting its alpha, we have to do it for all its childrens images instead
+    //if bool passed for fade in is true, fade in the elements. otherwise, fade it out.
+    void FadeInProgressBar(bool fadeIn)
+    {
+        float length = progressBar.GetComponentsInChildren<Image>().Length;
+        if (fadeIn)
+        {
+            for (int i = 0; i < length; i++)
+            {
+                progressBar.GetComponentsInChildren<Image>()[i].CrossFadeAlpha(1.0f, 5.0f, false);
+            }
+        }
+        else
+        { 
+            for (int i = 0; i < length; i++)
+            {
+                progressBar.GetComponentsInChildren<Image>()[i].CrossFadeAlpha(0.0f, 0.0f, false);
+            }
         }
     }
 }

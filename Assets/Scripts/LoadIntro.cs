@@ -17,6 +17,7 @@ public class LoadIntro : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        postProcessorScript = coral.postProcessorScript;
         if (!skipIntro)
         {
             BeginIntro();
@@ -25,7 +26,6 @@ public class LoadIntro : MonoBehaviour {
         {
             BeginGame();
         }
-        postProcessorScript = coral.postProcessorScript;
     }
 
     private void Update()

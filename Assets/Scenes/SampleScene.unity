@@ -6204,7 +6204,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Time
 --- !u!222 &420855142
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6223,11 +6223,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1703062161}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 290, y: -150.81}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 353.7, y: 92}
   m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &448173083
@@ -6793,7 +6793,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishParticles: []
   leftFishGroup: {fileID: 627679845}
+  rightFishGroup: {fileID: 1160364098}
   shouldLoop: 1
+  speed: 1
 --- !u!4 &593028865
 Transform:
   m_ObjectHideFlags: 0
@@ -11475,7 +11477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 627679846}
   m_Layer: 10
-  m_Name: FishParticles
+  m_Name: FishParticlesLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11965,12 +11967,12 @@ GameObject:
   - component: {fileID: 852227524}
   - component: {fileID: 852227523}
   m_Layer: 5
-  m_Name: PercentageLabel+
+  m_Name: PercentageLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &852227522
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11982,11 +11984,11 @@ RectTransform:
   m_LocalScale: {x: 1.0000215, y: 1.0000215, z: 1.0000215}
   m_Children: []
   m_Father: {fileID: 1703062161}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 111.3, y: -150.81015}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 353.7, y: -161.1}
   m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &852227523
@@ -12331,12 +12333,12 @@ RectTransform:
   - {fileID: 790318627}
   - {fileID: 100222705}
   m_Father: {fileID: 1703062161}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 25.52}
-  m_SizeDelta: {x: -90, y: 75}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 773.1, y: -199}
+  m_SizeDelta: {x: 1333.5, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1048354665
 MonoBehaviour:
@@ -12604,7 +12606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1160364099}
   m_Layer: 10
-  m_Name: FishParticles (1)
+  m_Name: FishParticlesRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13611,6 +13613,8 @@ MonoBehaviour:
   timerRunning: 0
   timerText: {fileID: 420855141}
   progressBar: {fileID: 1048354665}
+  percentText: {fileID: 852227523}
+  coralManager: {fileID: 942459411}
   time: 90
   speed: -0.15
 --- !u!4 &1506386235
@@ -13783,7 +13787,7 @@ MonoBehaviour:
   timer: {fileID: 1506386234}
   items: {fileID: 1242916172}
   coral: {fileID: 942459411}
-  skipIntro: 1
+  skipIntro: 0
 --- !u!4 &1592069626
 Transform:
   m_ObjectHideFlags: 0
@@ -14326,9 +14330,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 852227522}
   - {fileID: 1048354664}
   - {fileID: 420855143}
-  - {fileID: 852227522}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
