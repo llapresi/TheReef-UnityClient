@@ -318,7 +318,6 @@ public class UIManagerScript : MonoBehaviour {
         }
     }
 
-    //Decrement from the start to the end point over time
     //Gradually change the post processing weight
     IEnumerator IncrementWeightValue(float start, float end)
     {
@@ -344,7 +343,6 @@ public class UIManagerScript : MonoBehaviour {
     {
         if (totalTime >= reefKillTime && shouldSpawnPreGameTrash)
         {
-            Debug.Log("Spawning Trash");
             for (int i = 0; i < SpawnPoints.Length; i++)
             {
                 //Pick a random trash object to instantiate
