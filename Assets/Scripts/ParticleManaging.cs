@@ -9,7 +9,7 @@ public class ParticleManaging : MonoBehaviour {
     public GameObject leftFishGroup;
     public GameObject rightFishGroup;
 
-    public bool shouldLoop = true;
+    public bool shouldSpawnFish = true;
     public float speed = 1.0f;
 
 	// Use this for initialization
@@ -27,11 +27,25 @@ public class ParticleManaging : MonoBehaviour {
 
     void ChangeLoop()
     {
+        int spawnAmount;
+
+        if (shouldSpawnFish)
+        {
+            spawnAmount = 1000;
+        }
+        else
+        {
+            spawnAmount = 0;
+        }
+
+        Debug.Log("Spawn Amount: " + spawnAmount);
+
         //This does turn off the looping on all fish particles, but when turned back on, they dont respawn.
         for (int i = 0; i < fishParticles.Length; i++)
         {
             var main = fishParticles[i].main;
-            main.loop = shouldLoop;
+
+            main.maxParticles = spawnAmount;
             //Debug.Log(fishParticles[i].main.loop);
         }
     }
