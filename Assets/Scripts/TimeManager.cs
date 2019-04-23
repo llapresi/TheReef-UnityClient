@@ -56,10 +56,10 @@ public class TimeManager : MonoBehaviour {
             //Display minutes only if theres a minute to display
             if (time > 60)
             {
-                timerText.text = minuteText + ":" + secondText + " seconds left";
+                timerText.text = minuteText + ":" + secondText;
             } else
             {
-                timerText.text = "0:" + secondText + " seconds left";
+                timerText.text = "0:" + secondText;
             }
             if(time <= 0)
             {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using WebSocketSharp;
 
 public class PhoneCursor : MonoBehaviour {
@@ -15,6 +16,11 @@ public class PhoneCursor : MonoBehaviour {
     public Vector3 screenDimensions;
     private Color cursorColor;
     private UnityEngine.UI.Image cursorImage;
+
+    //+1 point text associated with each cursor
+    public GameObject plusOnePrefab;
+    public RectTransform plusOnePosition;
+    private Text plusOneText;
 
     public CursorImageManager cursorImages;
 
@@ -46,16 +52,24 @@ public class PhoneCursor : MonoBehaviour {
         newUICursor.transform.SetParent(uiCanvas.transform);
         cursorPosition = newUICursor.GetComponent<RectTransform>();
         cursorPosition.localScale = Vector3.one;
-        cursorImage = newUICursor.GetComponent<UnityEngine.UI.Image>();
+        cursorImage = newUICursor.GetComponent<Image>();
         cursorImage.sprite = cursorImages.GetNewCursorImage();
         offset = new Vector3(0.0f, 0.0f, 0.0f);
         RectTransform canvasSize = uiCanvas.GetComponent<RectTransform>();
         screenDimensions = new Vector2(canvasSize.rect.width, canvasSize.rect.height);
+
+        GameObject plusOne = Instantiate(plusOnePrefab);
+        plusOne.transform.SetParent(uiCanvas.transform);
+        plusOnePosition = plusOne.GetComponent<RectTransform>(); ;
+        plusOnePosition.localScale = Vector3.one;
+        plusOneText = plusOne.GetComponent<Text>();
+        plusOneText.CrossFadeAlpha(0.0f, 0.0f, false);
     }
 
     // Update is called once per frame
     void Update() {
         checkOffset();
+        UpdatePlusOneUI();
     }
 
     public void Fire(WebSocket webSocket)
@@ -139,6 +153,7 @@ public class PhoneCursor : MonoBehaviour {
         //Give back this sprite to the cursor image manager, and add it back to the list
         cursorImages.GiveBackCursorImage(cursorImage.sprite);
         Destroy(cursorPosition.gameObject);
+        Destroy(plusOnePosition.gameObject);
     }
 
     void checkOffset()
@@ -204,5 +219,27 @@ public class PhoneCursor : MonoBehaviour {
         {
             return 1;
         }
+    }
+
+    void UpdatePlusOneUI()
+    {
+        Vector3 giveXOffset = cursorPosition.anchoredPosition;
+        giveXOffset.x -= 85.0f;
+        giveXOffset.y += 85.0f;
+        plusOnePosition.anchoredPosition = giveXOffset;
+    }
+
+    public void ShowPlusOneOnPoint()
+    {
+        plusOneText.CrossFadeAlpha(1.0f, 0.5f, false);
+        StartCoroutine(ExecuteAfterTime(1.0f));
+    }
+
+    IEnumerator ExecuteAfterTime(float time)
+    {
+            yield return new WaitForSeconds(time);
+
+            // Code to execute after the delay
+            plusOneText.CrossFadeAlpha(0.0f, 0.5f, false);
     }
 }

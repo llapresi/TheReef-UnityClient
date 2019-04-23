@@ -92,6 +92,7 @@ public class TargetParent : MonoBehaviour {
         MakeNewYeetEndpoint();
         // Make our yeet middle node
         MakeNewYeetMidPoint();
+        heldBy.ShowPlusOneOnPoint();
     }
 
     public void MakeNewYeetMidPoint()

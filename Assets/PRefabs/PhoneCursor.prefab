@@ -60,4 +60,8 @@ MonoBehaviour:
   heldItem: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
   screenDimensions: {x: 0, y: 0, z: 0}
+  plusOnePrefab: {fileID: 1338272767124852, guid: 12557853b1a89f04da91cffe41eb6eba,
+    type: 2}
+  plusOnePosition: {fileID: 0}
+  cursorImages: {fileID: 0}
   useInterpolation: 1
