@@ -16,6 +16,7 @@ public class PhoneCursor : MonoBehaviour {
     public Vector3 screenDimensions;
     private string cursorColor;
     private UnityEngine.UI.Image cursorImage;
+    private WebSocket webSocket;
 
     //+1 point text associated with each cursor
     public GameObject plusOnePrefab;
@@ -59,6 +60,7 @@ public class PhoneCursor : MonoBehaviour {
         offset = new Vector3(0.0f, 0.0f, 0.0f);
         RectTransform canvasSize = uiCanvas.GetComponent<RectTransform>();
         screenDimensions = new Vector2(canvasSize.rect.width, canvasSize.rect.height);
+        SetupCursorColor(webSocket);
 
         GameObject plusOne = Instantiate(plusOnePrefab);
         plusOne.transform.SetParent(uiCanvas.transform);
@@ -72,6 +74,11 @@ public class PhoneCursor : MonoBehaviour {
     void Update() {
         checkOffset();
         UpdatePlusOneUI();
+    }
+
+    public void SetWebSocket(WebSocket ws)
+    {
+        webSocket = ws;
     }
 
     public void Fire(WebSocket webSocket)
