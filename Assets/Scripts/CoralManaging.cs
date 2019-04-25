@@ -15,58 +15,12 @@ public class CoralManaging : MonoBehaviour {
 
     public GameObject timeObject;
     private TimeManager timeManagerScript;
+    public ParticleManaging fishParticles;
 
     public AnimationCurve postProcessingWeightCurve;
+    public AnimationCurve fishSpawnRateCurve;
 
-    //Class to keep track of whether or not weight transitions happened yet
-    public class ReefWeight
-    {
-        public bool shouldTransition;
-        public float startingPoint;
-        public float endingPoint;
-        public float transitionPoint;
-
-        //Class to hold transitions for reefWeight
-        //Parameters:
-        //Starting float of post processing weight
-        //ending float of post processing weight to transition to
-        //Transtion float, which looks at the % of the reef that is clean. if > then the %, the trasition triggers
-        public ReefWeight(float p_startingPoint, float p_endingPoint, float p_transitionPoint)
-        {
-            shouldTransition = true;
-            startingPoint = p_startingPoint;
-            endingPoint = p_endingPoint;
-            transitionPoint = p_transitionPoint;
-        }
-
-        public void IsDone()
-        {
-            shouldTransition = false;
-        }
-
-        public void IsNotDone()
-        {
-            shouldTransition = true;
-        }
-
-        public bool CheckTransitionTime(float percentage){
-            //We've reached the threshold, so do the transition
-
-            if (!shouldTransition)
-            {//If it shouldnt transition, were done with it
-                return false;
-            }
-            if (percentage > transitionPoint && shouldTransition)
-            {
-                IsDone();
-                Debug.Log("Transitioning: " + "Start: " + startingPoint + "End: " + endingPoint + " %: " + transitionPoint);
-                return true;
-            }
-            
-            //Return false, until the transition is done
-            return false;
-        }
-    }//End reef weight class
+    
 
     // Use this for initialization
     void Start () {
@@ -81,7 +35,6 @@ public class CoralManaging : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
        ManagePercentageCollected();
-        //Debug.Log(postProcessorScript.weight);
 	}
 
     void ManagePercentageCollected()
@@ -102,7 +55,7 @@ public class CoralManaging : MonoBehaviour {
         // Evaluate weight curve
         float currentWeightValue = postProcessingWeightCurve.Evaluate(percentageCollected);
         postProcessorScript.weight = currentWeightValue;
-
+        AdjustFishParticles(percentageCollected);
     }
 
     public float GetPercentCollectedRounded()
@@ -120,5 +73,20 @@ public class CoralManaging : MonoBehaviour {
     public float GetPercentCollected()
     {
         return percentageCollected;
+    }
+
+    void AdjustFishParticles(float collected)
+    {
+        if (collected > .3f)
+        {
+            fishParticles.speed = 1.0f;
+            fishParticles.shouldSpawnFish = true;
+            float newRate = fishSpawnRateCurve.Evaluate(collected);
+            fishParticles.SetRate(newRate);
+        }
+        else
+        {
+            fishParticles.shouldSpawnFish = false;
+        }
     }
 }

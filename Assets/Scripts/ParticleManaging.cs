@@ -27,37 +27,16 @@ public class ParticleManaging : MonoBehaviour {
 
     void ChangeLoop()
     {
-        int spawnAmount;
-
-        if (shouldSpawnFish)
+        if (!shouldSpawnFish )
         {
-            spawnAmount = 1000;
-        }
-        else
+            StopParticles();
+        } else if (shouldSpawnFish)
         {
-            spawnAmount = 0;
-        }
-
-        Debug.Log("Spawn Amount: " + spawnAmount);
-
-        //This does turn off the looping on all fish particles, but when turned back on, they dont respawn.
-        for (int i = 0; i < fishParticles.Length; i++)
-        {
-            var emission = fishParticles[i];
-
-            if (!shouldSpawnFish)
-            {
-                emission.Stop();
-            } else
-            {
-                emission.Play();
-            }
-            //main.maxParticles = spawnAmount;
-            //Debug.Log(fishParticles[i].main.loop);
+            StartParticles();
         }
     }
 
-    void AdjustSpeed(float speedArg)
+    public void AdjustSpeed(float speedArg)
     {
         //This does turn off the looping on all fish particles, but when turned back on, they dont respawn.
         for (int i = 0; i < fishParticles.Length; i++)
@@ -67,4 +46,42 @@ public class ParticleManaging : MonoBehaviour {
             //Debug.Log(fishParticles[i].main.loop);
         }
     }
+
+    public void StartParticles()
+    {
+        for (int i = 0; i < fishParticles.Length; i++)
+        {
+            var emission = fishParticles[i];
+
+            if (!emission.isPlaying)
+            {
+                emission.Play();
+            }
+        }
+    }
+
+    public void StopParticles()
+    {
+        for (int i = 0; i < fishParticles.Length; i++)
+        {
+            var emission = fishParticles[i];
+
+            if (!emission.isStopped)
+            {
+                emission.Stop();
+            }
+        }
+    }
+
+    public void SetRate(float rate)
+    {
+        for (int i = 0; i < fishParticles.Length; i++)
+        {
+            var emission = fishParticles[i].emission;
+
+            emission.rateOverTime = rate;
+        }
+    }
+
+
 }

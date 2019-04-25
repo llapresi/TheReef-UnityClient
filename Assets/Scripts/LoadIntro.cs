@@ -9,6 +9,7 @@ public class LoadIntro : MonoBehaviour {
     public TimeManager timer;
     public ItemSpawning items;
     public CoralManaging coral;
+    public ParticleManaging fishParticles;
 
     private PostProcessVolume postProcessorScript;
 

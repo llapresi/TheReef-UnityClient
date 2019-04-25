@@ -306,6 +306,9 @@ public class UIManagerScript : MonoBehaviour {
         if (shouldKillReef && totalTime >= reefKillTime)
         {
             StartCoroutine(IncrementWeightValue(0.0f, 1.0f));
+            StartCoroutine(IncrementFishSpeed(1.0f, 4.0f));
+            parentSceneLoader.fishParticles.shouldSpawnFish = false;
+            parentSceneLoader.fishParticles.speed += Time.deltaTime;
             shouldKillReef = false;
         }
     }
@@ -324,6 +327,16 @@ public class UIManagerScript : MonoBehaviour {
         for (float f = start; f < end; f += 0.005f)
         {
             postProcessorScript.weight = f;
+            yield return null;
+        }
+    }
+
+    //Gradually change the post processing weight
+    IEnumerator IncrementFishSpeed(float start, float end)
+    {
+        for (float f = start; f < end; f += 0.01f)
+        {
+            parentSceneLoader.fishParticles.speed = f;
             yield return null;
         }
     }
