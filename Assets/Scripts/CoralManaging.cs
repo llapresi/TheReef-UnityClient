@@ -19,6 +19,8 @@ public class CoralManaging : MonoBehaviour {
     public ReefWeight[] reefWeightTransitions;
     bool atLeastTenPercent;
 
+    public AnimationCurve postProcessingWeightCurve;
+
     //Class to keep track of whether or not weight transitions happened yet
     public class ReefWeight
     {
@@ -104,25 +106,11 @@ public class CoralManaging : MonoBehaviour {
             return;
         }
 
+        // Evaluate weight curve
+        float currentWeightValue = postProcessingWeightCurve.Evaluate(percentageCollected);
+        postProcessorScript.weight = currentWeightValue;
 
-
-        foreach (ReefWeight r in reefWeightTransitions)
-        {
-            if (r.CheckTransitionTime(percentageCollected))
-            {
-                StartCoroutine(DecrementWeightValue(r.startingPoint, r.endingPoint));
-                atLeastTenPercent = true;
-            }
-
-        }
-
-        //Default weight if none of these conditions have been met
-        if (!atLeastTenPercent)
-        {
-            postProcessorScript.weight = 1.0f;
-        }
-
-    }//end manage percent collected
+    }
     
     //Decrement from the start to the end point over time
     //Gradually change the post processing weight
