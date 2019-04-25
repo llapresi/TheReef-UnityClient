@@ -14,7 +14,7 @@ public class PhoneCursor : MonoBehaviour {
     public TargetParent heldItem;
     public Vector3 offset;
     public Vector3 screenDimensions;
-    private Color cursorColor;
+    private string cursorColor;
     private UnityEngine.UI.Image cursorImage;
 
     //+1 point text associated with each cursor
@@ -54,6 +54,8 @@ public class PhoneCursor : MonoBehaviour {
         cursorPosition.localScale = Vector3.one;
         cursorImage = newUICursor.GetComponent<Image>();
         cursorImage.sprite = cursorImages.GetNewCursorImage();
+        cursorColor = cursorImage.sprite.name;
+        Debug.Log("Cursor Color: " + cursorColor);
         offset = new Vector3(0.0f, 0.0f, 0.0f);
         RectTransform canvasSize = uiCanvas.GetComponent<RectTransform>();
         screenDimensions = new Vector2(canvasSize.rect.width, canvasSize.rect.height);
@@ -105,12 +107,12 @@ public class PhoneCursor : MonoBehaviour {
 
     public void SetupCursorColor(WebSocket webSocket)
     {
-        cursorColor = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f, 1f, 1f);
+        //cursorColor = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f, 1f, 1f);
 
         PlayerColorMessage msg = new PlayerColorMessage();
         msg.userID = userID;
         msg.type = "playerColor";
-        msg.hexColor = ColorUtility.ToHtmlStringRGB(cursorColor);
+        msg.hexColor = cursorColor;
         webSocket.Send(JsonUtility.ToJson(msg));
     }
 
@@ -132,7 +134,7 @@ public class PhoneCursor : MonoBehaviour {
             StartGame targetWeHit = hit.collider.gameObject.GetComponent<StartGame>();
             //Let the target know we hit it
             targetWeHit.isHovered = true;
-            targetWeHit.changingColor = cursorColor;
+            //targetWeHit.changingColor = cursorColor;
 
         }
     }

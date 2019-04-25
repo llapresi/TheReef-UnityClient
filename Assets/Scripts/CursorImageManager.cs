@@ -8,7 +8,7 @@ public class CursorImageManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //cursorImages = new List<Sprite>();
+
 	}
 	
 	// Update is called once per frame
