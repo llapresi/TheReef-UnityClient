@@ -43,9 +43,16 @@ public class ParticleManaging : MonoBehaviour {
         //This does turn off the looping on all fish particles, but when turned back on, they dont respawn.
         for (int i = 0; i < fishParticles.Length; i++)
         {
-            var main = fishParticles[i].main;
+            var emission = fishParticles[i];
 
-            main.maxParticles = spawnAmount;
+            if (!shouldSpawnFish)
+            {
+                emission.Stop();
+            } else
+            {
+                emission.Play();
+            }
+            //main.maxParticles = spawnAmount;
             //Debug.Log(fishParticles[i].main.loop);
         }
     }
