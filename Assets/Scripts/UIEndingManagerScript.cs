@@ -12,6 +12,7 @@ public class UIEndingManagerScript : MonoBehaviour {
 
     public Text introText;    //You managed to save
     public Text introTextTwo; //Percentage
+    public Text finalText; //SAVE THE REEF
     private CoralManaging coralManager; //Access to %
 
     public LoadIntro parentSceneLoader;
@@ -145,17 +146,20 @@ public class UIEndingManagerScript : MonoBehaviour {
         uiTransitions = new List<UITransition>();
 
         //(UI to display, time to enter, time to leave)
-        uiTransitions.Add(new TextTransition(introText, 1.0f, 7.0f));
+        uiTransitions.Add(new TextTransition(introText, 1.0f, 5.0f));
 
         //This is a special text, so we change its %
-        TextTransition percentText = new TextTransition(introTextTwo, 2.0f, 7.0f);
+        TextTransition percentText = new TextTransition(introTextTwo, 2.0f, 5.0f);
         percentText.ChangeText(percentSaved + "% of the reef");
 
         //now add it
         uiTransitions.Add(percentText);
 
+        //last message
+        uiTransitions.Add(new TextTransition(finalText, 6.0f, 10.0f));
 
-        
+
+
         // Update is called once per frame
     }
     void Update () {
