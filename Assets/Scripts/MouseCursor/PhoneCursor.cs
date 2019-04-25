@@ -25,6 +25,9 @@ public class PhoneCursor : MonoBehaviour {
 
     public CursorImageManager cursorImages;
 
+    //sound effects
+    private SoundEffectScripts soundMaker;
+
     // Storing our current and previous rotations for cursor interp
     Vector2 storedRotation;
     Vector2 prevStoredRotation;
@@ -68,6 +71,8 @@ public class PhoneCursor : MonoBehaviour {
         plusOnePosition.localScale = Vector3.one;
         plusOneText = plusOne.GetComponent<Text>();
         plusOneText.CrossFadeAlpha(0.0f, 0.0f, false);
+
+        soundMaker = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundEffectScripts>();
     }
 
     // Update is called once per frame
@@ -155,6 +160,8 @@ public class PhoneCursor : MonoBehaviour {
             heldItem.DoYeet();
             heldItem.heldBy = null;
             heldItem = null;
+            //Upon yeet, play our sound
+            soundMaker.PlayRandomBubble();
         }
 
     }
