@@ -12709,6 +12709,16 @@ Prefab:
       propertyPath: CustomDataModule.vector0_0.scalar
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 199622376146621118, guid: a5b1d6f73e922cf458a349de5b76b929,
+        type: 2}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199622376146621118, guid: a5b1d6f73e922cf458a349de5b76b929,
+        type: 2}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b1d6f73e922cf458a349de5b76b929, type: 2}
   m_IsPrefabAsset: 0
@@ -13236,6 +13246,16 @@ Prefab:
     - target: {fileID: 198394194919939242, guid: a5b1d6f73e922cf458a349de5b76b929,
         type: 2}
       propertyPath: CustomDataModule.vector0_0.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199622376146621118, guid: a5b1d6f73e922cf458a349de5b76b929,
+        type: 2}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199622376146621118, guid: a5b1d6f73e922cf458a349de5b76b929,
+        type: 2}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
