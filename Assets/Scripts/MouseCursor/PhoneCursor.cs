@@ -107,12 +107,14 @@ public class PhoneCursor : MonoBehaviour {
 
     public void SetupCursorColor(WebSocket webSocket)
     {
-        //cursorColor = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f, 1f, 1f);
+        //cursorColor and cursorImage are null, so this doesnt work
+        //cursorColor = cursorImage.sprite.name;
 
         PlayerColorMessage msg = new PlayerColorMessage();
         msg.userID = userID;
         msg.type = "playerColor";
-        msg.hexColor = cursorColor;
+        msg.hexColor = "red";//just send a color so it doesnt break
+        //Debug.Log("MESSAGE HEX: " + msg.hexColor);
         webSocket.Send(JsonUtility.ToJson(msg));
     }
 

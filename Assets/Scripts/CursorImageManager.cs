@@ -28,5 +28,6 @@ public class CursorImageManager : MonoBehaviour {
     {
         //Add it back to the front of the list
         cursorImages.Insert(0,imageGottenBack);
+        Debug.Log("CURSOR RETRIEVED: " + imageGottenBack.name);
     }
 }
