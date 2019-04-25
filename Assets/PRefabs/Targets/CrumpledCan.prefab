@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114415467207241804}
   - component: {fileID: 114656772068969532}
   - component: {fileID: 65476106473850586}
+  - component: {fileID: 54369284089427394}
   m_Layer: 9
   m_Name: CrumpledCan
   m_TagString: Untagged
@@ -115,6 +116,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1692568359016574}
   m_Mesh: {fileID: 4300002, guid: 0f19d5e0645a4b747892faf4f68f50b4, type: 3}
+--- !u!54 &54369284089427394
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1220100439815096}
+  serializedVersion: 2
+  m_Mass: 16.1
+  m_Drag: 8.35
+  m_AngularDrag: 5.57
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &65476106473850586
 BoxCollider:
   m_ObjectHideFlags: 1

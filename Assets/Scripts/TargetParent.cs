@@ -27,6 +27,7 @@ public class TargetParent : MonoBehaviour {
     private GameObject itemManager;
     private ItemSpawning itemSpawnScript;
     private float fallSpeed;
+    private Rigidbody myRB;
 
 
 	void Start () {
@@ -36,12 +37,14 @@ public class TargetParent : MonoBehaviour {
         itemManager = GameObject.FindGameObjectWithTag("ItemManager");
         itemSpawnScript = itemManager.GetComponent<ItemSpawning>();
         fallSpeed = itemSpawnScript.fallSpeed;
+        myRB = GetComponent<Rigidbody>();
     }
 	
 	// Update is called once per frame
 	void Update () {
 		if(heldBy != null)
         {
+            myRB.isKinematic = true;
             Vector3 cursorPosAtOurZ = new Vector3(heldBy.cursorPosition.transform.position.x, heldBy.cursorPosition.transform.position.y, 80.0f);
             Vector3 newPosition = heldBy.camera.ScreenToWorldPoint(cursorPosAtOurZ);
             this.transform.position = newPosition;
@@ -120,7 +123,8 @@ public class TargetParent : MonoBehaviour {
     {
         Vector3 tempPos = transform.position;
         tempPos.y -= (fallSpeed / .016f) * Time.deltaTime;
-        transform.position = tempPos;
+
+        myRB.MovePosition(tempPos);
 
         if (tempPos.y <= -50.0f)
         {

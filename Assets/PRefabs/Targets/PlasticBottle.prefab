@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114683249817019812}
   - component: {fileID: 114071787819125492}
   - component: {fileID: 65120506679163674}
+  - component: {fileID: 54002358502057554}
   m_Layer: 9
   m_Name: PlasticBottle
   m_TagString: Untagged
@@ -394,6 +395,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1075268951160124}
   m_Mesh: {fileID: 4300010, guid: 263470a01be51ae4383c458534ac8fe2, type: 3}
+--- !u!54 &54002358502057554
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1003026768442996}
+  serializedVersion: 2
+  m_Mass: 16.1
+  m_Drag: 8.35
+  m_AngularDrag: 5.57
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &65120506679163674
 BoxCollider:
   m_ObjectHideFlags: 1
