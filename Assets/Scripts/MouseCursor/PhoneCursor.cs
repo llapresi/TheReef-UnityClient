@@ -59,7 +59,6 @@ public class PhoneCursor : MonoBehaviour {
         cursorImage = newUICursor.GetComponent<Image>();
         cursorImage.sprite = cursorImages.GetNewCursorImage();
         cursorColor = cursorImage.sprite.name;
-        Debug.Log("Cursor Color: " + cursorColor);
         offset = new Vector3(0.0f, 0.0f, 0.0f);
         RectTransform canvasSize = uiCanvas.GetComponent<RectTransform>();
         screenDimensions = new Vector2(canvasSize.rect.width, canvasSize.rect.height);
@@ -119,13 +118,10 @@ public class PhoneCursor : MonoBehaviour {
 
     public void SetupCursorColor(WebSocket webSocket)
     {
-        //cursorColor and cursorImage are null, so this doesnt work
-        //cursorColor = cursorImage.sprite.name;
-
         PlayerColorMessage msg = new PlayerColorMessage();
         msg.userID = userID;
         msg.type = "playerColor";
-        msg.hexColor = "red";//just send a color so it doesnt break
+        msg.hexColor = cursorColor;//just send a color so it doesnt break
         //Debug.Log("MESSAGE HEX: " + msg.hexColor);
         webSocket.Send(JsonUtility.ToJson(msg));
     }
