@@ -77,13 +77,14 @@ public class TargetParent : MonoBehaviour {
 
     public void DoHit(PhoneCursor p_userID)
     {
-        //only register hits if its not already held.
-        //i.e., no more thieving
-        //if (heldBy == null)
-        //{
-            heldBy = p_userID;
-        //}
-        //StartCoroutine(ChangeColor());
+
+        //if the trash gets yoinked from you.
+        if (heldBy != null)
+        {
+            heldBy.heldItem = null;
+        }
+
+        heldBy = p_userID;
     }
 
     public void DoYeet()

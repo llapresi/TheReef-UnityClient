@@ -159,7 +159,6 @@ public class PhoneCursor : MonoBehaviour {
             //Upon yeet, play our sound
             soundMaker.PlayRandomBubble();
         }
-
     }
 
     void OnDestroy()
